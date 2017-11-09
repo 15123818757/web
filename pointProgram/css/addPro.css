@@ -1,0 +1,190 @@
+.header {
+	border-bottom: none;
+}
+
+.add {
+	background: white;
+}
+
+.add>p:nth-of-type(1) {
+	font-size: 16px;
+	text-align: center;
+	font-weight: bold;
+	color: #646464;
+	border-bottom: 1px solid #e5e5e5 ;
+	padding: 4% 0;
+}
+
+.addCon {
+	padding: 3%;
+	box-sizing: border-box;
+	position: relative;
+	background: white;
+	padding-bottom: 0;
+}
+
+.addCon p {
+	font-size: 14px;
+	color: #646464;
+	margin: 10px 0;
+	clear: both;
+}
+
+.addCon>p:nth-of-type(9) {
+	font-size: 12px;
+}
+
+.addCon input {
+	display: block;
+	height: 40px;
+	box-sizing: border-box;
+	width: 100%;
+	border: 1px solid #dadada;
+	color: #ababab;
+	font-size: 14px;
+	line-break: 40px;
+	padding-left: 10px;
+	outline: none;
+	margin: 10px 0;
+}
+
+form a {
+	display: block;
+	z-index: 999;
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	line-height: 40px;
+	text-align: center;
+	color: white;
+	font-size: 14px;
+	background: #58c8a2;
+}
+
+.addCon textarea {
+	display: block;
+	height: 120px;
+	resize: none;
+	box-sizing: border-box;
+	width: 100%;
+	border: 1px solid #dadada;
+	color: #ababab;
+	font-size: 14px;
+	line-break: 40px;
+	padding-left: 10px;
+	padding-top: 10px;
+	outline: none;
+	margin: 10px 0;
+}
+
+.addCon label {
+	display: block;
+	font-size: 12px;
+	color: #ababab;
+	margin-top: -5px;
+}
+
+.addCon>div {
+	margin: 10px 0;
+}
+
+.addCon>div>div {
+	display: inline-block;
+	/*width: 33.333%;*/
+	width: 145px;
+	margin-right: 5px;
+	float: left;
+	position: relative;
+	margin-bottom: 10px;
+}
+
+.addCon>div>div input {
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	cursor: pointer;
+}
+
+.addCon>div>div img {
+	display: block;
+	margin: auto;
+	width: 20px;
+}
+
+.addCon>div>div p {
+	text-align: center;
+	color: #ababab;
+	font-size: 12px;
+}
+
+.choseClass {
+	border: 1px solid #eaeaea;
+	min-height: .8rem;
+	position: relative;
+	overflow: hidden;
+	padding: 0 .1rem;
+	margin-top: .2rem;
+	height: 40px;
+}
+
+.choseClass input {
+	position: absolute;
+	outline: 0;
+	left: 0;
+	top: 0;
+	width: 100%;
+	color: #646464;
+	height: 100%;
+	text-indent: .1rem;
+	margin: 0;
+	border: 0;
+	font-size: 14px;
+}
+
+.choseClass span {
+	position: absolute;
+	top: 15px;
+	right: 10px;
+	border-left: 7px solid transparent;
+	border-right: 7px solid transparent;
+	border-top: 10px solid #bbb;
+}
+
+.mui-poppicker-header {
+	background: white;
+}
+
+.mui-poppicker-body {
+	border-top: none;
+}
+
+.mui-poppicker-body .mui-picker {
+	background: white;
+}
+
+.mui-pciker-list li {
+	font-size: 14px;
+}
+.jietu{
+	width: 100% !important;
+}
+.up-img{
+	width: 130px;
+	height: auto;
+}
+.jietu section div section{
+	width: 130px  !important;
+	height: auto !important;
+}
+.jietu section div section{
+	margin-right: 5px;
+	margin-bottom: 5px;
+}
+.jietu section div{
+	padding: 0 !important;
+}

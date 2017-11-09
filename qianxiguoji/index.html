@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>裁剪图片</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/cropper.min.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
+  <style>
+  	.cc{margin-top: 50px;text-align: center;opacity: 0;}
+  	.cc img{max-width: 300px;}
+  	.cc>div{display: inline-block;float: none;}
+  	.img-container{background: black;}
+  	.btn-group button,.btn-group label{background: #ff8315 !important;border-color: white !important;}
+  	.container {padding-top: 5%;}
+  	.subLoading{padding: 20px;padding-top: 30px;padding-bottom: 10px;}
+    .subLoading p{margin-top: 50%;}
+    .info p span{font-size: 16px;}
+    .SeeImg>img{width: 100%;}
+    .bb{text-align: center;}
+    .bb>div{display: inline-block;float: none;width: 70%;}
+    @media only screen and (min-width: 100px) and (max-width: 640px) {
+    	.bb>div{width: 95%;}
+    }
+  </style>
+</head>
+<body>
+  <div class="container docs-overview">
+    <div class="row bb">
+      <div class="col-md-9">
+        <div class="img-container"><img src=""></div>
+        <div class="docs-toolbar">
+          <div class="btn-group">
+          	<label class="btn btn-primary">
+              <input class="hide" id="inputImage" name="file" type="file" accept="image/*">
+              <span class="docs-tooltip">
+                <span>选取图片</span>
+              </span>
+            </label>
+            <button class="btn btn-primary" id="getDataURL2" type="button" data-index = "0">确定</button>
+            <button class="btn btn-primary" id="close" type="button">取消</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row cc">
+            <!--<div class="col-sm-6">
+              <textarea class="form-control" id="dataURLInto" rows="8"></textarea>
+            </div>-->
+            <div class="col-sm-6">
+              <div id="dataURLView"></div>
+            </div>
+    </div>
+		<div class="row cc">
+	            <!--<div class="col-sm-6">
+	              <textarea class="form-control" id="dataURLInto" rows="8"></textarea>
+	            </div>-->
+	            <div class="col-sm-6">
+	              <div id="dataURLView"></div>
+	            </div>
+	    </div>
+  </div>
+
+	<!-- 主要内容 -->
+	<!-- loading -->
+	<div class="subLoading">
+				<span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <p>提交中</p>
+	</div>
+	<form>
+		<div class="content">
+			<img src="img/step1.jpg" />
+			<div class="info">
+				<div class="first">
+					<p>姓名：</p>
+					<input type="text" class="name" placeholder="请输入你的姓名" />
+					<span class="tip tip_name">请填写正确的姓名！</span>
+					<p>手机：</p>
+					<input type="text" class="tel" placeholder="请输入你的电话号码" />
+					<span class="tip tip_tel">请填写正确的电话号码！</span>
+					<p>身份证号码：</p>
+					<input type="number" class="num" placeholder="请输入你的身份证号码" />
+					<span  class="tip tip_num">请填写正确的身份证号码！</span>
+					<a>下一步</a>	
+				</div>
+				<div class="second">
+					<p>请上传身份证的正面</p>
+					<div class="SeeCont">
+						<div class="SeeImg image_container">
+							<img class="myimg" src='' />
+						</div>
+						<button class="TxText xzBtn" id="imgReplaceBtn" type="button">选择图片   </button>
+					</div>
+					
+					<p>请上传身份证的反面</p>
+					<div class="SeeCont">
+						<div class="SeeImg image_container">
+							<img class="myimg_2" src='' />
+						</div>
+						<button class="TxText xzBtn" id="imgReplaceBtn_2" type="button">选择图片   </button>
+					</div>
+					<a>上一步</a>
+					<a>下一步</a>
+				</div>
+				<div class="third">
+					<p>姓名：<span></span></p>
+					<p>手机：<span></span></p>
+					<p>身份证号码：<span></span></p>
+					<p>身份证正面：</p>
+					<img src="" />
+					<p>身份证反面：</p>
+					<img src="" />
+					<a>上一步</a>
+					<a id="sub">确认提交</a>
+				</div>
+				<div class="fourth">
+					<p>提交成功</p>
+				</div>
+			</div>
+		</div>
+	</form>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="js/cropper.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

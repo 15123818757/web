@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta content="no-cache,must-revalidate" http-equiv="Cache-Control">
+<meta content="no-cache" http-equiv="pragma">
+<meta content="0" http-equiv="expires">
+<meta content="telephone=no, address=no" name="format-detection">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link href="css/dialog.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/reset.css" media="all">
+    <link rel="stylesheet" type="text/css" href="css/main.css" media="all">
+    <link rel="stylesheet" type="text/css" href="css/support.css">
+
+<script src="js/jquery-1.4.3.min.js"></script>
+<script type="text/javascript" src="js/dialog_min.js"></script>
+<script type="text/javascript" src="js/player_min.js"></script>
+<title>砸金蛋</title>    
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+<meta name="Keywords" content="砸金蛋">
+<meta name="Description" content="砸金蛋。">
+</head>
+    <body onselectstart="return true;" ondragstart="return false;" huaban_screen_capture_injected="true">
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+	//playbox.init("playbox");
+	//
+	var shape = document.getElementById("shape");
+	var hitObj = {
+		handleEvent: function(evt){
+						if("SPAN" == evt.target.tagName){
+				var audio = new Audio();
+				audio.src = "music/smashegg.mp3";
+				audio.play();
+				setTimeout(function(){
+					evt.target.classList.toggle("on");
+					//var rand = Math.round(Math.random()*10);
+					
+					//用于测试
+					var num=1;
+					if(num==1){
+						evt.target.classList.toggle("luck");
+						alert("恭喜你，中了二等奖")
+						//lqsb()
+					}else{
+						 var urls = ["images/coin.png"];
+						// getCoin(urls);
+						 //;jg(0);
+						 alert("很遗憾，你没有中奖")
+						 }
+					
+				}, 100);
+				$("#hit").addClass("on").css({left: evt.pageX+"px", top:evt.pageY +"px"});
+			}
+			shape.removeEventListener("click", hitObj, false);
+					}
+	}
+	shape.addEventListener("click", hitObj, false);
+}, false);
+</script>
+		<div style="position:absolute;left:10px;top:10px;z-index:350;">
+		<a href="javascript:;" id="playbox" class="btn_music" onclick="playbox.init(this).play();" ontouchstart="event.stopPropagation();"></a><audio id="audio" loop src="music/default.mp3" style="pointer-events:none;display:none;width:0!important;height:0!important;"></audio>
+	<section class="stage">
+		<img src="images/stage.jpg" data-pinit="registered">
+		<div id="shape" class="cube on">
+	       <div class="plane one"><span><figure></figure></span></div>
+	       <div class="plane two"><span><figure></figure></span></div>
+	       <div class="plane three"><span><figure></figure></span></div>
+	    </div>
+	    <div id="hit" class="hit"><img src="images/1.png" data-pinit="registered"></div>
+	</section>
+        		<div mark="stat_code" style="width:0px; height:0px; display:none;">
+					</div>
+	
+	<script type="text/javascript">
+	(function() {
+		var wtj = document.createElement('script'); wtj.type = 'text/javascript'; wtj.async = true;
+		wtj.src = 'http://tj.weimob.com/wtj.js?url=' + encodeURIComponent(location.href);
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(wtj, s);
+	})();
+</script>
+</body></html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui"> 
+    <style type="text/css">
+        input[type="date"]:before {
+            content: attr(placeholder);
+            color:red;
+        }
+        ::-webkit-input-placeholder {
+            color:red;
+        }
+    </style> 
+   <script src="js/jquery-1.8.2.min.js"></script> 
+</head>
+<body>
+    <input type="date" value="我是日期" id="date">
+    
+ 
+    <script type="text/javascript">
+	$(function(){
+		var $dateed=$("#date");
+		$dateed.focus(function(){
+			this.removeAttribute('value');
+			})
+		$dateed.blur(function(){
+			alert(1)
+            if(this.value == ''){
+				$(this).setAttribute('value','我是日期');
+			}
+			})
+		})
+        /*var o = document.getElementById('date');
+        o.onfocus = function(){
+            this.removeAttribute('placeholder');
+        };
+        o.onblur = function(){
+			alert(1)
+            if(this.value == '') this.setAttribute('placeholder','我是日期');
+        };*/
+ 
+    </script>
+</body>
+</html>

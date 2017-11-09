@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta content="no-cache,must-revalidate" http-equiv="Cache-Control">
+<meta content="no-cache" http-equiv="pragma">
+<meta content="0" http-equiv="expires">
+<meta content="telephone=no, address=no" name="format-detection">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta name="apple-mobile-web-app-capable" content="yes"> <!-- apple devices fullscreen -->
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<!--<link rel="shortcut icon" href="http://stc.weimob.com/img/favicon.ico">-->
+<link rel="stylesheet" type="text/css" href="css/reset.css" media="all">
+<!--<link rel="stylesheet" type="text/css" href="css/main.css" media="all">-->
+<link rel="stylesheet" type="text/css" href="css/dialog.css" media="all">
+<link rel="stylesheet" type="text/css" href="css/support.css">
+
+<script src="js/jquery-1.4.3.min.js"></script>
+<script type="text/javascript" src="js/dialog_min.js"></script>
+<script type="text/javascript" src="js/player_min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script src="js/easydialog.min.js"></script>
+<script src="js/easydialog.js"></script>
+<title>砸金蛋</title>    
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+<meta name="Keywords" content="砸金蛋">
+<meta name="Description" content="砸金蛋。">
+</head>
+    <body onselectstart="return true;" ondragstart="return false;" huaban_screen_capture_injected="true">
+
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+	playbox.init("playbox");
+	//
+	var shape = document.getElementById("shape");
+	var hitObj = {
+		handleEvent: function(evt){
+					var num=1;
+					if(num==1){
+						evt.target.classList.toggle("luck");
+						alert("恭喜你，中了二等奖")
+						//lqsb()
+						jg(arg);
+					}else{
+						 var urls = ["images/coin.png"];
+						// getCoin(urls);
+						 //;jg(0);
+						 alert("很遗憾，你没有中奖")
+						 }
+			shape.removeEventListener("click", hitObj, false);
+					}
+	}
+	shape.addEventListener("click", hitObj, false);
+}, false);
+</script>
+		<div style="position:absolute;left:10px;top:10px;z-index:350;">
+		<a href="javascript:;" id="playbox" class="btn_music" onclick="playbox.init(this).play();" ontouchstart="event.stopPropagation();"></a><audio id="audio" loop src="music/default.mp3" style="pointer-events:none;display:none;width:0!important;height:0!important;"></audio>
+   <div id="shape">的疯狂螺丝结顶发了多少付款</div>
+ <script type="text/javascript">
+ window.alert = function(str){
+		var d7 = new iDialog();
+		d7.open({
+			classList: "alert",
+			title:"",
+			close:"",
+			content:str,
+			btns:[
+				{id:"", name:"确定", onclick:"fn.call();", fn: function(self){
+					self.die();
+				}},
+			]
+		});
+	}
+ </script>
+</body></html>

@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>汽车抽奖</title>
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js" ></script>
+    <style>
+    	body{padding: 0;margin: 0;}
+    	img{
+    		transition: 0.5s;
+    		z-index: 2;
+    	}
+    	.box{
+    		position: fixed;
+    		width: 100%;
+    		height: 100%;
+    		top: 0;
+    		left: 0;
+    		z-index: 10;
+    		background: url(img/bg.png) no-repeat;
+    		background-size: 100% 100%;
+    		/*-webkit-filter: blur(5px);*/
+    	}
+    	.box img{
+    		display: block;
+    		position: absolute;
+    	}
+    	.box img:nth-of-type(1){
+    		bottom: 0;
+    		left: 0;
+    		width: 100%;
+    		max-height: 60%;
+    	}
+    	.pan{
+    		transform:rotateZ(0);
+    		z-index: 10;
+    	}
+    	.ppAAni{
+    		animation: ppAni 2s infinite linear;
+    		-webkit-animation: ppAni 2s infinite linear;
+    	}
+    	@keyframes ppAni{
+    		0%{transform: rotateZ(0);}
+    		25%{transform:rotateZ(25deg);}
+    		50%{transform: rotateZ(0deg);}
+    		75%{transform: rotateZ(-25deg);}
+    		100%{transform: rotateZ(0deg);}
+    	}
+    	@-webkit-keyframes ppAni{
+    		0%{transform:  rotateZ(0);}
+    		25%{transform:rotateZ(25deg);}
+    		50%{transform: rotateZ(0deg);}
+    		75%{transform:  rotateZ(-25deg);}
+    		100%{transform: rotateZ(0deg);}
+    	}
+    	
+    	@keyframes zzAni{
+    		0{transform:  rotateZ(0);}
+    		50%{transform:  rotateZ(45deg);}
+    		100%{transform:  rotateZ(0);}
+    	}
+    	@-webkit-keyframes zzAni{
+    		0{transform:  rotateZ(0);}
+    		50%{transform:  rotateZ(45deg);}
+    		100%{transform:  rotateZ(0);}
+    	}
+    	.zzAAni{
+    		animation: zzAni 2s infinite linear;
+    		-webkit-animation: zzAni 2s infinite linear;
+    	}
+    	.brand{
+    		/*height: 10%;*/
+    		height: 10px;
+    		z-index: 1;
+    		transition: 5s;
+    	}
+		.cc{
+			padding: 10px;
+		}
+    	.cc span{
+    		float: left;
+    		font-size: 14px;
+    	}
+    	.cc span:nth-of-type(2){
+    		float: right;
+    	}
+    	.mo,.confirm{
+    		position: fixed;
+    		top: 0;
+    		left: 0;
+    		width: 100%;
+    		height: 100%;
+    		background: rgba(0,0,0,0.5);
+    		z-index: 999;
+    		display: none;
+    	}
+    	
+    	.mo div:nth-of-type(1),.mo div:nth-of-type(2){
+    		width: 50%;
+    		line-height: 50px;
+    		border-radius: 5px;
+    		text-align: center;
+    		background: white;
+    		color: black;
+    		font-size: 12px;
+    		font-family: "微软雅黑";
+    		transition: 0.5s;
+    		transform: scale(0);
+    		position: absolute;
+    		left: 25%;
+    	}
+    	.mo div:nth-of-type(2){
+    		transform: scale(0);
+    	}
+		.confirm div{
+			width: 50%;
+    		border-radius: 10px;
+    		text-align: center;
+    		background: white;
+    		color: black;
+    		font-size: 12px;
+    		font-family: "微软雅黑";
+    		margin-left: 25%;
+    		transition: 0.5s;
+		}
+		.confirm div p{
+			padding: 10px;
+			box-sizing: border-box;
+			margin: 0;
+		}
+		.confirm div button,#open{
+			margin-bottom: 10px;
+			width: 70%;
+			line-height: 20px;
+			background: #2ECCFF;
+			border: none;
+			color: white;
+			outline: none;
+			box-shadow: 3px 3px 5px gray;
+		}
+		#open{
+			width: 85%;
+		}
+		.getImg1{
+			position: fixed;
+			bottom: 0%;
+			left: 0px;
+			/*height: 400px;*/
+			z-index: 99;
+			width: 75%;
+			display: none;
+		}
+		.getImg2{
+			position: fixed;
+			bottom: 0%;
+			left: 0px;
+		/*	height: 400px;*/
+			z-index: 99;
+			width: 100%;
+			display: none;
+		}
+		.getImg3{
+			position: fixed;
+			bottom: 10%;
+			left: 0px;
+			z-index: 99;
+			/*height: 400px;*/
+			width: 100%;
+			display: none;
+		}
+		.getImg4{
+			position: fixed;
+			bottom: 0%;
+			left: 0px;
+			/*height: 400px;*/
+			z-index: 99;
+			display: none;
+			width: 75%;
+		}
+		.get{
+			transition: 1s;
+		}
+		.divbotton1,.divbotton2,.divbotton3,.divbotton4{
+			display: none;
+			width: 100%;
+			height: 130px;
+			position: absolute;
+			bottom: 0px;
+			text-align: center;
+		}
+		.divbotton1 p,.divbotton2 p,.divbotton3 p,.divbotton4 p{
+			color: #ffa210;
+			margin: 0;
+			font-size: 25px;
+		}
+		.divbotton_2,.divbotton_4,.divbotton_6,.divbotton_8{
+			margin-top: 15px;
+		}
+		.divbotton_1 p:nth-of-type(1) a,.divbotton_3 p:nth-of-type(1) a,.divbotton_7 p:nth-of-type(1) a{
+			color: white;
+		}
+		.divbotton_1 p:nth-of-type(1) a:nth-of-type(2),.divbotton_3 p:nth-of-type(1) a:nth-of-type(2){
+			color: #ff1010;
+		}
+		.divbotton_2 a>img,.divbotton_4 a>img,.divbotton_6 a>img,.divbotton_8 a>img{
+			width: 130px;
+			height: 60px;
+		}
+		.divbotton_2 a:nth-of-type(1), .divbotton_4 a:nth-of-type(1),.divbotton_6 a:nth-of-type(1),.divbotton_8 a:nth-of-type(1){
+			margin-right: 10px;
+			box-sizing: border-box;
+		}
+		.divbotton_2 a:nth-of-type(2),.divbotton_4 a:nth-of-type(2),.divbotton_6 a:nth-of-type(2),.divbotton_8 a:nth-of-type(2){
+			margin-left: 10px;
+			box-sizing: border-box;
+		}
+		.divtext{
+			display: none;
+			width: 50px;
+			height: 50px;
+			position: absolute;
+			top: 40.5%;
+			left: 40%;
+		}
+		.divtext p{
+			color: #ffa210;
+			font-size: 20px;
+		}
+		@media only screen and (min-width: 321px) and (max-width: 375px) {
+			.divtext{
+				top: 41%;
+			}
+		}
+		@media only screen and (min-width: 376px) and (max-width: 414px) {
+			.divtext{
+				top: 41.5%;
+			}
+		}
+    </style>
+</head>
+<body>
+	<div class="introduce">
+		<div></div>
+	</div>
+	<div class="box">
+		<!--<div class="cc">
+			<span>剩余广告牌数量：<b class="total">10</b></span>
+			<span>获得的数量：<b class="get">0</b></span>
+		</div>-->
+		
+		<div class="mo">
+			<div>
+				游戏结束，你获得了<b class="get">0</b>个广告牌
+				<button id="open">打开宝箱</button>
+			</div>
+			<div>恭喜您，获得了<label>一</label>等奖</div>
+		</div>
+		
+		<div class="confirm">
+			<div>
+				<p id="tip">抱歉，您和奖项距离太远了！</p>
+				<p>您还有<b class="total">9</b>次机会，点击继续</p>
+				<button id="btn">确定</button>
+			</div>
+		</div>
+		
+		<img class="car" src="img/car.png" />
+		<img class="pan" src="img/fxp.png" />
+		<img class="zhen" src="img/zhen.png" />
+		<img class="zhen2" src="img/zhen.png" />
+		<img class="brand" src="img/get0.png" />
+	</div>
+	<!-- 显示的奖项 -->
+	<img class="get getImg1" src="img/getImg0.png" />
+	<img class="get getImg2" src="img/getImg1.png" />
+	<img class="get getImg3" src="img/getImg2.png" />
+	<img class="get getImg4" src="img/IMgGet5.png" />
+	
+	<div class="divbotton1">	
+		<div class="divbotton_1"><p>恭喜你抽取<a>小酒</a><a>1</a>瓶</p></div>
+		<div class="divbotton_2"><a><img src="img/qian.png" /></a><a><img src="img/shao.png" /></a></div>
+	</div>
+	<div class="divbotton2">	
+		<div class="divbotton_3"><p>恭喜你抽取<a>行咖帽</a><a>1</a>顶</p></div>
+		<div class="divbotton_4"><a><img src="img/qian.png" /></a><a><img src="img/shao.png" /></a></div>
+	</div>
+	<div class="divbotton3">	
+		<div class="divbotton_5"><p>别气馁，奇迹总在下一秒</p></div>
+		<div class="divbotton_6"><a><img src="img/qian.png" /></a><!--<a><img src="img/shao.png" /></a>--></div>
+	</div>
+	<div class="divbotton4">	
+		<div class="divbotton_7"><p>恭喜你抽中<a>500积分</a></p></div>
+		<div class="divbotton_8"><a><img src="img/qian.png" /></a><a><img src="img/shao.png" /></a></div>
+	</div>
+	<!-- 加载页面 -->
+	<div class="loading" style="width:100%; height:100%; background:#fff url(img/loading.gif) center center no-repeat; background-size:40px auto; position:fixed; top:0px; left:0px; z-index:99999;"></div>
+	<script>
+			
+			window.onload = function(){
+				var imgar = [];
+			    imgar[0] = new Image();
+			    imgar[0].src = "img/bgMove.gif";
+			    imgar[1] = new Image();
+			    imgar[1].src = "img/bg.png";
+			    
+			    
+				var W = $(window).width(),
+					H = $(window).height();
+				$(".loading").css({ "width": W, "height": H });
+				setTimeout(function(){
+					$(".loading").fadeOut("fast");	
+				},1000);
+				
+			var tip = document.getElementById("tip");
+			var confirm = document.getElementsByClassName("confirm")[0];
+			var btn = document.getElementById('btn');
+			btn.addEventListener("click",function(){
+				confirm.style.display = "none";
+				pan.className = "pan ppAAni";
+					zhen.className = "zhen zzAAni";
+					zhen2.className = "zhen2 zzAAni";
+					$(".brand").css({
+						"top":"60%",
+						"left":"-500%",
+						"height":"300%"
+				});
+			});
+			var box = document.getElementsByClassName("box")[0];
+			var pan  =document.getElementsByClassName("pan")[0];
+			var zhen = document.getElementsByClassName("zhen")[0];
+			var zhen2 = document.getElementsByClassName("zhen2")[0];
+			var brand = document.getElementsByClassName("brand")[0];
+			var carHei = $(".car").height();
+			var carWid = $(".car").width();
+			var scrWid = document.body.clientWidth;
+			var scrHei = $(".box").height();
+			
+			$(".get").css("max-height",scrHei*0.7+"px");
+			
+			//方向盘
+			$(".pan").css("height",(carHei*0.65)+"px");
+			//指针1
+			$(".zhen").css("height",carHei*0.078+"px");
+			//指针2
+			$(".zhen2").css("height",carHei*0.078+"px");
+			//牌子
+			
+			//百分比定位
+			setTimeout(function(){
+				$(".pan").css("left",(scrWid-$(".pan").width())/2+"px");
+				$(".pan").css("bottom",scrWid*0.048+"px");
+				$(".zhen").css("bottom",carHei*0.47+"px");
+				$(".zhen").css("left",scrWid*0.381+"px");
+				$(".zhen").css("transform-origin","50% 15%");
+				$(".zhen2").css("bottom",carHei*0.47+"px");
+				$(".zhen2").css("left",scrWid*0.628+"px");
+				$(".zhen2").css("transform-origin","50% 15%");
+				brand.style.left = scrWid*0.48+"px";
+				brand.style.top = scrHei*0.42+"px";
+			},1000);
+
+			brand2();
+		
+			//方案2
+			function brand2(){
+				var fun2 = function(){
+					console.log("游戏开始");
+					$(".box").css({
+						"background":"url("+imgar[0].getAttribute("src")+") no-repeat",
+						"background-size":"100% 100%"
+					});
+					pan.className = "pan ppAAni";
+					zhen.className = "zhen zzAAni";
+					zhen2.className = "zhen2 zzAAni";
+					$(".brand").css({
+						"top":"9%",
+						"left":"10%",
+						"height":"50%"
+					});
+					//随机图片
+					imgData = setInterval(function(){
+						var str = [0,1,2,3];
+						var random = Math.floor(Math.random()*str.length);
+						var result = str[random];
+						$(".brand").attr("src","img/get"+result+".png");
+						$(".brand").attr('data',result);
+						clearInterval(imgData);
+					},100);
+					setTimeout(function(){
+						clearInterval(imgData);
+						pan.className = "pan";
+						zhen.className = "zhen";
+						zhen2.className = "zhen2";
+						switch (parseInt($(".brand").attr("data"))){
+							case 0:
+							//  小酒
+								$(".getImg1").css({
+									"display":"block",
+								});
+								$(".divbotton1").css({
+									"display":"block",
+									"z-index":"99"
+								});
+								break;
+							//  帽子
+							case 1:
+								$(".getImg2").css({
+									"display":"block",
+								});
+								$(".divbotton2").css({
+									"display":"block",
+									"z-index":"99"
+									
+								});
+								break;
+							//  啥都没
+							case 2:
+								$(".getImg3").css({
+									"display":"block"
+								});
+								$(".divbotton3").css({
+									"z-index":"99",
+									"display":"block"
+								});
+								break;
+							//  积分
+							case 3:
+								$(".getImg4").css({
+									"display":"block"
+								});
+								// 产生随机数
+								var str = [10,50,100,200];
+								var random = Math.floor(Math.random()*str.length);
+								var result = str[random];
+								$(".getImg4").attr("src","img/"+result+"jf.png");
+								$(".divbotton_7 p a").text(result+"积分");
+								$(".divbotton4").css({
+									"display":"block",
+									"z-index":"99"
+								});
+								$(".divtext").css({
+									"display":"block",
+									"z-index":"99"
+								});
+								break;
+						}
+						$(".box").css("-webkit-filter","blur(5px)");
+						$(".box").css({
+							"background":"url("+imgar[1].getAttribute("src")+") no-repeat",
+							"background-size":"100% 100%"
+						});
+					},5000);
+					pan.removeEventListener("click",fun2);
+				}
+				pan.addEventListener("click",fun2);
+			}
+		
+			
+			
+	
+				
+				
+				
+				
+			}
+			
+	</script>
+	
+</body>
+</html>

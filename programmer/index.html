@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>程序猿的那些事儿</title>
+    <link rel="stylesheet" href="css/public.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="SHORTCUT ICON" href="img/logo.ico" />
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js" ></script>
+    <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.1.0.js"></script>
+    <style>
+             .cc{
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				z-index: 9999999;
+				background: white;
+				display: none;
+			}
+			.cc img{
+				display: block;
+				position: absolute;
+				width: 20%;
+				top:18%;
+				left:40%;
+
+			}
+			.cc p{
+				width:100%;
+				position: absolute;
+				top:65%;
+				color: #000000;
+				font-size: 12px;
+				text-align: center;
+			}
+        </style>
+</head>
+<body>
+	<div class="cc">
+		<img src="img/head.gif" />
+		<p>竖屏浏览，效果更佳！</p>
+	</div>
+	<audio id="bgm" src="audio/bgm1.mp3" autoplay="autoplay" loop="loop">
+		<source src="audio/bgm1.mp3" type="audio/mp3" >
+		HTML5 audio not supported 
+	</audio>
+	
+	<audio id="bgm2" src="audio/bgm2.mp3" loop="loop">
+		<source src="audio/bgm2.mp3" type="audio/mp3" >
+		HTML5 audio not supported 
+	</audio>
+	
+	<audio id="bgm3" src="audio/bgm3.mp3" loop="loop">
+		<source src="audio/bgm3.mp3" type="audio/mp3" >
+		HTML5 audio not supported 
+	</audio>
+	<!-- 最外层盒子 -->
+	<div class="box scroll">
+		<!-- 俺是程序员 -->
+		<div class="num">
+			<img class="img1 monkey" src="img/2/peo.gif" />
+			<img class="img1" src="img/2/font1.png"  />
+			<img class="img1" src="img/2/font2.png"  />
+			<img class="img1" src="img/2/font3.png"  />
+			<img class="img1" src="img/2/asp.png" />
+			<img class="img1" src="img/2/jsp.png" />
+			<img class="img1" src="img/2/net.png" />
+			<img class="img1" src="img/2/php.png" />
+			
+			<img class="goDown" src="img/goDown1.png"  />
+		</div>
+		<!-- 热爱生活 -->
+		<div class="num">
+			<img class="img2" src="img/3/earth.png" />
+			<img class="img2 monkey" src="img/3/peo.gif"  />
+			<img class="img2" src="img/3/font1.png" />
+			<img class="img2" src="img/3/font2.png" />
+			<img class="img2" src="img/3/font3.png" />
+			<img class="img2" src="img/3/cloud2.png" />
+			<img class="img2" src="img/3/cloud1.png" />
+			<img class="img2" src="img/3/butterfly.png"  />
+			
+			<img class="goDown" src="img/goDown1.png"  />
+		</div>
+		<!-- 心中女神 -->
+		<div class="num">
+			<img class="img3" src="img/4/font1.png" />
+			<img class="img3" src="img/4/font2.png" />
+			<img class="img3" src="img/4/font3.png" />
+			<img id="mat" class="img3 monkey" src="img/4/mat.png" />
+			<img class="img3 monkey" src="img/4/peo.png" />
+			
+			<img id="ct1" src="img/4/curtain_left.png" />
+			<img id="ct2" src="img/4/curtain_right.png" />
+			
+			<img class="goDown" src="img/goDown1.png"  />
+		</div>
+		<!-- 心中男神 -->
+		<div class="num">
+			
+			<img class="img4" src="img/5/font1.png" />
+			<img class="img4" src="img/5/font2.png" />
+			<img class="img4" src="img/5/font3.png" />
+			<img class="img4 monkey" src="" />
+			<img class="img4 monkey" src="img/5/scales.png" />
+			<img class="img4 monkey" src="img/5/pc.png" />
+			
+			<img class="goDown" src="img/goDown1.png"  />
+			<!--<img class="ct1" src="img/4/curtain_left.png" />-->
+			<!--<img class="ct2" src="img/4/curtain_right.png" />-->
+			<!--<img class="flower" src="img/5/flower.png"  />-->
+		</div>
+		<!-- 什么玩意儿 -->
+		<div class="num">
+			<img class="img5" src="img/6/bg.png" />
+			<img class="img5" src="img/6/img1.png" />
+			<img class="img5" src="img/6/img2.png" />
+			<img class="img5" src="img/6/img3.png" />
+			<img class="img5" src="img/6/img4.png" />
+			<img class="img5" src="img/6/img5.png" />
+			<img class="img5" src="img/6/img6.png" />
+			<img class="img5" src="img/6/img7.png" />
+			<img class="img5" src="img/6/img8.png" />
+			<img class="img5" src="img/6/img9.png" />
+			<img class="img5" src="img/6/img10.png" />
+			<!--<img class="meteor" src="img/6/meteor.png" />-->
+			<img class="img5" src="img/6/img5.png" /><!-- 12 -->
+			<img class="img5" src="img/6/2017.png" />
+			<img class="img5" src="img/6/img11.png" />
+			<img class="img5" src="img/6/img12.png" />
+			<img class="img5" src="img/6/img18.png" />
+			<img class="img5" src="img/6/img13.png" />
+			<img class="img5" src="img/6/img14.png" />
+			<img class="img5" src="img/6/img15.png" />
+			<img class="img5" src="img/6/img16.png" />
+			<img class="img5" src="img/6/img17.png"  /><!-- 21 -->
+			
+			<img class="goDown" src="img/goDown1.png"  />
+		</div>
+		<!-- 了解更多 -->
+		<div class="num">
+			<img class="img6" src="img/7/font1.png" />
+			<img class="img6" src="img/7/font2.png" />
+			<img class="img6" src="img/7/font3.png" />
+			<img class="img6" src="img/3/earth.png"  />
+			<img class="img6" src="img/7/cloud1.png" />
+			<img class="img6" src="img/7/cloud2.png" />
+			<img class="img6 monkey" src="img/7/qr_code.png" />
+			<img class="img6 monkey" src="img/7/bird.png" />
+			<img class="img6 monkey" src="img/7/flower.png" />
+			<img class="img6" src="img/7/butterfly.png" />
+			
+			<img class="goDown" src="img/goDown1.png"  />
+		</div>
+	</div>	
+	
+	
+	<!-- 加载页面 -->
+	<div class="loading" style="z-index:10000;width:100%; height:100%; background: white; position:fixed; top:0px; left:0px; z-index:99999;">
+		<img src="img/head.gif" />
+		<img src="img/loading.gif"  />
+	</div>
+	
+	
+	<div class="start">
+		<img id="earth" src="img/1/2_03.png" />
+		<img src="img/1/img7.png" />
+		<img src="img/1/img8.png" />
+		<img src="img/1/img9.png" />
+		<img id="go" src="img/touch.png"  />
+		<img src="img/1/img4.png" />
+		<img src="img/1/img5.png" />
+		<img src="img/1/img6.png" />
+		<img src="img/1/img1.png" />
+		<img id="out" src="img/1/1_03.png" />
+	</div>
+	<script type="text/javascript" src="js/main.js" ></script>
+</body>
+</html>

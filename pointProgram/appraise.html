@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	    <title>点点程序</title>
+	    <link rel="stylesheet" href="css/public.css" />
+	    <link rel="stylesheet" href="css/category.css" />
+	    <link rel="stylesheet" href="css/main.css" />
+	    <script type="text/javascript" src="js/jquery-1.7.2.min.js" ></script>
+	    <style>
+	    	.appraiseBox{
+	    		width: 94%;
+	    		margin: auto;
+	    		margin-top: 10px;
+	    		margin-bottom: 10px;
+	    		box-sizing: border-box;
+	    		background: white;
+	    		border-radius: 5px;
+	    	}
+	    	.appraiseBox a{
+	    		width: 100%;
+	    		display: block;
+	    		border-radius:5px;
+	    		overflow: hidden;
+	    		position: relative;
+	    	}
+	    	.appraiseBox a img{
+	    		width: 100%;
+	    	}
+	    	.appraiseBox a span{
+	    		display: block;
+	    		position: absolute;
+	    		right: 0;
+	    		top: 0;
+	    		background: #d2a363;
+	    		padding:50px;
+	    		padding-bottom: 0;
+	    		line-height: 28px;
+	    		padding-top: 40px;
+	    		transform: rotateZ(45deg) translate(17%,-93%);
+	    		color: white;
+	    	}
+	    	.appraiseBox a img:nth-of-type(2){
+	    		position: absolute;
+	    		width: 20%;
+	    		left: 4%;
+	    		bottom: 10%;
+	    	}
+	    	.appraiseBox div{
+	    		line-height: 40px;
+	    		padding: 3%;
+	    		box-sizing: border-box;
+	    	}
+	    	.appraiseBox div b{
+	    		font-size: 20px;
+	    		color: #4c4c4c;
+	    	}
+	    	.appraiseBox div a{
+	    		display: inline-block;
+	    		float: right;
+	    		margin-top: 3%;
+	    		margin-right: 3%;
+			    width: 13%;
+			    max-width: 55px;
+			    line-height: 25px;
+			    border-radius: 5px;
+			    color: #58c8a2;
+			    text-align: center;
+			    border: 1px solid #58c8a2;
+			    box-sizing: border-box;
+			    background: white;
+			    letter-spacing: 1px;
+	    	}
+	    </style>
+	</head>
+	<body>
+		<!-- 头部 -->
+		<header class="header">
+			<span>
+			<a href="index.html"><img src="img/logo.png" /></a>
+			<a><img id="search" src="img/search.png" /></a>
+			<div>
+				<a href="index.html">精选</a>
+				<a href="class.html">类别</a>
+				<a href="theme.html">专题</a>
+				<a class="activeFont" href="appraise.html">测评</a>
+			</div>
+			<div>
+				<div>
+					<input type="text" placeholder="搜索你喜欢的" />
+					<a href="result.html"><img src="img/search.png" /></a>
+				</div>
+				<span class="login">登录</span>
+			</div>
+			</span>
+		</header>
+		<!-- 搜索的div -->
+		<div class="searchBox">
+			<div>
+				<input type="text" placeholder="请输入小程序关键词" />
+				<a href="result.html"><img src="img/search.png" /></a>
+			</div>
+			<div>
+				<p>热门搜索</p>
+				<p><a>腾讯</a></p>
+				<p><a>单车</a></p>
+				<p><a>小程序</a></p>
+				<p><a>宝宝</a></p>
+				<p><a>小说</a></p>
+				<p><a>汽车</a></p>
+			</div>
+		</div>
+		<div class="pc_headerBox" style="height: 70px;"></div>
+		<!-- 登录框 -->
+		<div class="loginBox">
+			<div>
+				<!-- 关闭按钮 -->
+				<span>
+					<span>
+						<span></span>
+						<span></span>
+					</span>
+				</span>
+				<img src="img/logo.png" />
+				<p><span></span>快捷登录<span></span></p>
+				<div>
+					<a href="index_my.html">
+						<img src="img/my/qq.png" />
+						<p>QQ登录</p>
+					</a>
+					<a>
+						<img src="img/my/wx.png" />
+						<p>微信登录</p>
+					</a>
+					<a>
+						<img src="img/my/xl.png" />
+						<p>新浪登录</p>
+					</a>
+				</div>
+			</div>
+		</div>
+		<!-- PC 回到顶部 -->
+		<div class="goTop">
+			<div><img src="img/PC/index/rightIcon1.png" /><a><span>免费</span><span>发布</span></a></div>
+			<div><img src="img/PC/index/rightTip.png" /><a><span>关注</span><span>点点</span></a><img class="rightLogo" src="img/PC/index/blogo.png" /></div>
+			<div id="goTop_pc"><img src="img/PC/index/goTop.png" /><a><span>回到</span><span>顶部</span></a></div>
+		</div>
+		<!-- 测评盒子 -->
+		<div class="appraiseBox">
+			<a href="article.html">
+				<img src="img/appraise/bgImg1.png" />
+				<img src="img/sLogo4.png" />
+				<span><label>7.1</label>分</span>
+			</a>
+			<div>
+				<b>极简笔记</b>
+				<a class="click">点点</a>
+				<a href="article.html">测评</a>
+			</div>
+		</div>
+		
+		<div class="appraiseBox">
+			<a href="article.html">
+				<img src="img/appraise/bgImg2.png" />
+				<img src="img/sLogo1.png" />
+				<span><label>8.1</label>分</span>
+			</a>
+			<div>
+				<b>王者荣耀</b>
+				<a class="click">点点</a>
+				<a href="article.html">测评</a>
+			</div>
+		</div>
+		
+		<!-- 测评PC内容 -->
+		<div class="appraiseContent">
+			<div class="cpLeftBox">
+				<a>
+					<span>
+						<img src="img/sLogo1.png" />
+						<img src="img/PC/apprise/img3.jpg" />
+						<span>9.0分</span>
+					</span>
+					<p>
+						<span>没车也能自驾游！端午出行，就用它快速租车！</span>
+						<span>6小时前</span>
+					</p>
+					<p>
+						<span><img src="img/article/heart.png" />45<img src="img/article/pao.png" />12</span>
+					</p>
+				</a>
+				<span><a>加载更多</a></span>
+			</div>
+			<div class="cpRightBox">
+				<div class="remen" id="remen">
+					<p>
+						<label></label>
+						<span>热门测评</span>
+					</p>
+					<a>
+						<div>
+							<img src="img/PC/apprise/img5.jpg"/>
+							<p><span>微信小程序又在搞事情啦！微信小程序又在搞事情啦</span></p>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+		
+		
+		<!-- 点击按钮出现的框 -->
+		<div id="moBox">
+			<div>
+				<img src="img/sLogo4.png" />
+				<p>极简笔记</p>
+				<span></span>
+				<p>（请手动复制小程序名称）</p>
+				<img src="img/bottomImg1.jpg" />
+				<a>前往微信</a>
+			</div>
+		</div>
+		
+		<!-- 点击按钮出现的框  微信 -->
+		<div id="moBoxWx">
+			<div>
+				<img src="img/bottomImg2.jpg" />
+				<p>长按识别二维码</p>
+ 				<p>打开小程序</p>
+			</div>
+		</div>
+		<!-- 底部PC -->
+	    <div class="footer_pc">
+	    	<span>
+	    	<img src="img/PC/index/bottomLogo.png" />
+	    	<div>
+	    		<a href="index.html">精选</a>
+	    		<span></span>
+	    		<a href="class.html">类别</a>
+	    		<span></span>
+	    		<a href="theme.html">专题</a>
+	    		<span></span>
+	    		<a href="appraise.html">测评</a>
+	    	</div>
+	    	<p>Copyright © 2016 www.diandianchengxu.com. All Rights Reserved.</p>
+	    	<div>
+	    		<div><img src="img/PC/index/blogo.png" /></div>
+	    		<p>扫一扫关注点点程序</p>
+	    	</div>
+	    	</span>
+	    </div>
+		<!-- 底部 -->
+	    <div id="hideDiv"></div>
+	    <footer class="nav">
+	    	<a class="navBox" href="index.html">
+	    		<div><img src="img/bImg1.png" /></div>
+	    		<p>精选</p>
+	    	</a>
+	    	<a href="class.html" class="navBox">
+	    		<div><img src="img/bImg2.png" /></div>
+	    		<p>类别</p>
+	    	</a>
+	    	<a href="theme.html" class="navBox">
+	    		<div><img src="img/bImg3.png" /></div>
+	    		<p>专题</p>
+	    	</a>
+	    	<a href="appraise.html" class="navBox">
+	    		<div><img src="img/bImgColor4.png" /></div>
+	    		<p class="activeFont">测评</p>
+	    	</a>
+	    	<a href="index_my.html" class="navBox">
+	    		<div><img src="img/bImg5.png" /></div>
+	    		<p>我的</p>
+	    	</a>
+	    </footer>
+		<script type="text/javascript" src="js/main.js" ></script>
+		<script>
+			// 隐藏盒子
+				$("#moBox").click(function(){
+					$("#moBox>div").css("bottom","-100%");
+					setTimeout(function(){
+						$("#moBox").css("display","none");
+					},300);
+				});
+				
+				$("#moBoxWx").click(function(){
+					$("#moBoxWx>div").css("bottom","-100%");
+					setTimeout(function(){
+						$("#moBoxWx").css("display","none");
+					},300);
+				});
+					
+				//  判断是否是微信浏览器
+				function isWeiXin(){
+			        var ua = window.navigator.userAgent.toLowerCase();
+					if(ua.match('micromessenger') == 'micromessenger'){
+						//  在微信中打开
+						$(".click").click(function(){
+							$("#moBoxWx").css("display","block");
+							setTimeout(function(){
+								$("#moBoxWx>div").css("bottom","0");
+							},100);
+						});
+					}else{
+						//  点击点点
+						$(".click").click(function(){
+							console.log(1);
+							$("#moBox").css("display","block");
+							setTimeout(function(){
+								$("#moBox>div").css("bottom","0");
+							},100);
+						});
+					}
+			    }
+				isWeiXin();	
+		</script>
+	</body>
+</html>

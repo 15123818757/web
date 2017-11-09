@@ -1,0 +1,13 @@
+html{overflow:hidden;}
+html,body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td,article,section,figure,menu,li,ul,footer,time,aside{margin:0;padding:0;}
+body{font-family:微软雅黑;overflow:hidden;}
+html,body {}
+/*div,article,section,nav,header,footer,figure {height:auto; overflow:hidden;}*/
+ul,li{list-style:none;margin:0;padding:0;}
+h1, h2, h3, h4, h5, h6{font-weight:normal;} 
+img{border:none;border:0;vertical-align:middle;}
+a{text-decoration:none;outline:none;}
+p{margin:0;padding:0;}
+input,select,textarea{vertical-align:middle;}
+input{margin:0;outline:none;padding:0;}
+input::-ms-clear{display:none;}

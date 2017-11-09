@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	    <title>点点程序</title>
+	    <link rel="stylesheet" href="css/public.css" />
+	    <link rel="stylesheet" href="css/main.css" />
+	    <script type="text/javascript" src="js/jquery-1.7.2.min.js" ></script>
+	    <style>
+	    	.con>a{
+	    		display: inline-block;
+	    		width: 33.3333%;
+	    		box-sizing: border-box;
+	    		float: left;
+	    		text-align: center;
+	    		background: white;
+	    	}
+	    	.con>a img{
+	    		width: 30%;
+	    		display: inline-block;
+	    		margin-top: 26%;
+	    	}
+	    	.con>a p{
+	    		font-size: 14px;
+	    		line-height: 2;
+	    		color: #4c4c4c;
+	    	}
+	    	@media only screen and (min-width: 100px) and (max-width: 320px) {
+	    		.con>a p{font-size: 12px;}	
+	    	}
+	    	@media only screen and (min-width: 750px) and (max-width: 800px) {
+	    		.con>a p{font-size: 30px;}	
+	    	}
+	    	@media only screen and (min-width: 640px) and (max-width: 10000px) {
+				.guide_pc{padding: 0 !important;}
+				.guide_pc>div a{float: left;}	    		
+	    	}
+	    </style>
+	</head>
+	<body>
+		<!-- 头部 -->
+		<header class="header">
+			<span>
+			<a href="index.html"><img src="img/logo.png" /></a>
+			<a><img id="search" src="img/search.png" /></a>
+			<div>
+				<a href="index.html">精选</a>
+				<a class="activeFont" href="class.html">类别</a>
+				<a href="theme.html">专题</a>
+				<a href="appraise.html">测评</a>
+			</div>
+			<div>
+				<div>
+					<input type="text" placeholder="搜索你喜欢的" />
+					<a href="result.html"><img src="img/search.png" /></a>
+				</div>
+				<span class="login">登录</span>
+				<span class="userLogoTop"><img src="img/my/userLogo.png" /></span>
+			</div>
+			</span>
+		</header>
+		<!-- 搜索的div -->
+		<div class="searchBox">
+			<div>
+				<input type="text" placeholder="请输入小程序关键词" />
+				<a href="result.html"><img src="img/search.png" /></a>
+			</div>
+			<div>
+				<p>热门搜索</p>
+				<p><a>腾讯</a></p>
+				<p><a>单车</a></p>
+				<p><a>小程序</a></p>
+				<p><a>宝宝</a></p>
+				<p><a>小说</a></p>
+				<p><a>汽车</a></p>
+			</div>
+		</div>
+		<div class="pc_headerBox" style="height: 70px;"></div>
+		<!-- PC 回到顶部 -->
+		<div class="goTop">
+			<div><img src="img/PC/index/rightIcon1.png" /><a><span>免费</span><span>发布</span></a></div>
+			<div><img src="img/PC/index/rightTip.png" /><a><span>关注</span><span>点点</span></a><img class="rightLogo" src="img/PC/index/blogo.png" /></div>
+			<div id="goTop_pc"><img src="img/PC/index/goTop.png" /><a><span>回到</span><span>顶部</span></a></div>
+		</div>
+		<!-- 登录框 -->
+		<div class="loginBox">
+			<div>
+				<!-- 关闭按钮 -->
+				<span>
+					<span>
+						<span></span>
+						<span></span>
+					</span>
+				</span>
+				<img src="img/logo.png" />
+				<p><span></span>快捷登录<span></span></p>
+				<div>
+					<a href="index_my.html">
+						<img src="img/my/qq.png" />
+						<p>QQ登录</p>
+					</a>
+					<a>
+						<img src="img/my/wx.png" />
+						<p>微信登录</p>
+					</a>
+					<a>
+						<img src="img/my/xl.png" />
+						<p>新浪登录</p>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="con">
+			<a href="category.html"><img src="img/icon/img1.png" /><p>社交</p></a>
+			<a><img src="img/icon/img2.png" /><p>生活</p></a>
+			<a><img src="img/icon/img3.png" /><p>工具</p></a>
+			<a><img src="img/icon/img4.png" /><p>阅读</p></a>
+			<a><img src="img/icon/img5.png" /><p>影音</p></a>
+			<a><img src="img/icon/img6.png" /><p>图像</p></a>
+			<a><img src="img/icon/img7.png" /><p>办公</p></a>
+			<a><img src="img/icon/img8.png" /><p>购物</p></a>
+			<a><img src="img/icon/img9.png" /><p>金融</p></a>
+			<a><img src="img/icon/img10.png" /><p>出行</p></a>
+			<a><img src="img/icon/img11.png" /><p>旅游</p></a>
+			<a><img src="img/icon/img12.png" /><p>体育</p></a>
+			<a><img src="img/icon/img13.png" /><p>餐饮</p></a>
+			<a><img src="img/icon/img14.png" /><p>教育</p></a>
+			<a><img src="img/icon/img15.png" /><p>健康</p></a>
+			<a><img src="img/icon/img16.png" /><p>母婴</p></a>
+			<a><img src="img/icon/img17.png" /><p>房产</p></a>
+			<a><img src="img/icon/img18.png" /><p>财务</p></a>
+			<span style="height: 50px;float: left;width: 100%;"></span>
+			<div class="pc_content">
+				<!-- 导航 -->
+				<div class="classTitle_pc">
+					<a class="activeFont">全部</a>
+					<a>社交</a>
+					<a>生活</a>
+					<a>工具</a>
+					<a>阅读</a>
+					<a>影音</a>
+					<a>图像</a>
+					<a>办公</a>
+					<a>购物</a>
+					<a>金融</a>
+					<a>出行</a>
+					<a>旅游</a>
+					<a>体育</a>
+					<a>餐饮</a>
+					<a>教育</a>
+					<a>健康</a>
+					<a>母婴</a>
+					<a>房产</a>
+					<a>政务</a>
+				</div>
+				<!-- 选项 -->
+				<div class="xxPc">
+					<a class="activeXXPcA">热度</a>
+					<a>最新</a>
+				</div>
+				<!-- 主要的内容 -->
+				<div class="guide_pc">
+					<div>
+						<a>
+			    			<img src="img/sLogo1.png" />
+			    			<div>
+			    				<p>极简笔记</p>
+			    				<div>
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<span>5.0</span>
+			    				</div>
+			    				<p>极简笔记是一款非常简单实用的工具类小程序，它能让您非常快捷的记录您的日常生活</p>
+			    			</div>
+			    			<label>
+			    				<div>
+			    					<span>工具</span>
+			    					<span>方便快捷</span>
+			    				</div>
+			    				<span>点点<img class="erWeiMa" src="img/PC/index/er.png" /></span>
+			    			</label>
+			    		</a>
+			    		<a>
+			    			<img src="img/sLogo2.png" />
+			    			<div>
+			    				<p>极简笔记</p>
+			    				<div>
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<span>5.0</span>
+			    				</div>
+			    				<p>极简笔记是一款非常简单实用的工具类小程序，它能让您非常快捷的记录您的日常生活</p>
+			    			</div>
+			    			<label>
+			    				<div>
+			    					<span>工具</span>
+			    					<span>方便快捷</span>
+			    				</div>
+			    				<span>点点<img class="erWeiMa" src="img/PC/index/er.png" /></span>
+			    			</label>
+			    		</a>
+			    		<a>
+			    			<img src="img/sLogo3.png" />
+			    			<div>
+			    				<p>极简笔记</p>
+			    				<div>
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<span>5.0</span>
+			    				</div>
+			    				<p>极简笔记是一款非常简单实用的工具类小程序，它能让您非常快捷的记录您的日常生活</p>
+			    			</div>
+			    			<label>
+			    				<div>
+			    					<span>工具</span>
+			    					<span>方便快捷</span>
+			    				</div>
+			    				<span>点点<img class="erWeiMa" src="img/PC/index/er.png" /></span>
+			    			</label>
+			    		</a>
+			    		<a>
+			    			<img src="img/sLogo4.png" />
+			    			<div>
+			    				<p>极简笔记</p>
+			    				<div>
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<span>5.0</span>
+			    				</div>
+			    				<p>极简笔记是一款非常简单实用的工具类小程序，它能让您非常快捷的记录您的日常生活</p>
+			    			</div>
+			    			<label>
+			    				<div>
+			    					<span>工具</span>
+			    					<span>方便快捷</span>
+			    				</div>
+			    				<span>点点<img class="erWeiMa" src="img/PC/index/er.png" /></span>
+			    			</label>
+			    		</a>
+			    		<a>
+			    			<img src="img/sLogo5.png" />
+			    			<div>
+			    				<p>极简笔记</p>
+			    				<div>
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<span>5.0</span>
+			    				</div>
+			    				<p>极简笔记是一款非常简单实用的工具类小程序，它能让您非常快捷的记录您的日常生活</p>
+			    			</div>
+			    			<label>
+			    				<div>
+			    					<span>工具</span>
+			    					<span>方便快捷</span>
+			    				</div>
+			    				<span>点点<img class="erWeiMa" src="img/PC/index/er.png" /></span>
+			    			</label>
+			    		</a>
+			    		<a>
+			    			<img src="img/sLogo2.png" />
+			    			<div>
+			    				<p>极简笔记</p>
+			    				<div>
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<span>5.0</span>
+			    				</div>
+			    				<p>极简笔记是一款非常简单实用的工具类小程序，它能让您非常快捷的记录您的日常生活</p>
+			    			</div>
+			    			<label>
+			    				<div>
+			    					<span>工具</span>
+			    					<span>方便快捷</span>
+			    				</div>
+			    				<span>点点<img class="erWeiMa" src="img/PC/index/er.png" /></span>
+			    			</label>
+			    		</a>
+			    		<a>
+			    			<img src="img/sLogo1.png" />
+			    			<div>
+			    				<p>极简笔记</p>
+			    				<div>
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<span>5.0</span>
+			    				</div>
+			    				<p>极简笔记是一款非常简单实用的工具类小程序，它能让您非常快捷的记录您的日常生活</p>
+			    			</div>
+			    			<label>
+			    				<div>
+			    					<span>工具</span>
+			    					<span>方便快捷</span>
+			    				</div>
+			    				<span>点点<img class="erWeiMa" src="img/PC/index/er.png" /></span>
+			    			</label>
+			    		</a>
+			    		<a>
+			    			<img src="img/sLogo3.png" />
+			    			<div>
+			    				<p>极简笔记</p>
+			    				<div>
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<span>5.0</span>
+			    				</div>
+			    				<p>极简笔记是一款非常简单实用的工具类小程序，它能让您非常快捷的记录您的日常生活</p>
+			    			</div>
+			    			<label>
+			    				<div>
+			    					<span>工具</span>
+			    					<span>方便快捷</span>
+			    				</div>
+			    				<span>点点<img class="erWeiMa" src="img/PC/index/er.png" /></span>
+			    			</label>
+			    		</a>
+			    		<a>
+			    			<img src="img/sLogo2.png" />
+			    			<div>
+			    				<p>极简笔记</p>
+			    				<div>
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<span>5.0</span>
+			    				</div>
+			    				<p>极简笔记是一款非常简单实用的工具类小程序，它能让您非常快捷的记录您的日常生活</p>
+			    			</div>
+			    			<label>
+			    				<div>
+			    					<span>工具</span>
+			    					<span>方便快捷</span>
+			    				</div>
+			    				<span>点点<img class="erWeiMa" src="img/PC/index/er.png" /></span>
+			    			</label>
+			    		</a>
+			    		<a>
+			    			<img src="img/sLogo2.png" />
+			    			<div>
+			    				<p>极简笔记</p>
+			    				<div>
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<span>5.0</span>
+			    				</div>
+			    				<p>极简笔记是一款非常简单实用的工具类小程序，它能让您非常快捷的记录您的日常生活</p>
+			    			</div>
+			    			<label>
+			    				<div>
+			    					<span>工具</span>
+			    					<span>方便快捷</span>
+			    				</div>
+			    				<span>点点<img class="erWeiMa" src="img/PC/index/er.png" /></span>
+			    			</label>
+			    		</a>
+			    		<a>
+			    			<img src="img/sLogo2.png" />
+			    			<div>
+			    				<p>极简笔记</p>
+			    				<div>
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<span>5.0</span>
+			    				</div>
+			    				<p>极简笔记是一款非常简单实用的工具类小程序，它能让您非常快捷的记录您的日常生活</p>
+			    			</div>
+			    			<label>
+			    				<div>
+			    					<span>工具</span>
+			    					<span>方便快捷</span>
+			    				</div>
+			    				<span>点点<img class="erWeiMa" src="img/PC/index/er.png" /></span>
+			    			</label>
+			    		</a>
+			    		<a>
+			    			<img src="img/sLogo2.png" />
+			    			<div>
+			    				<p>极简笔记</p>
+			    				<div>
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<span>5.0</span>
+			    				</div>
+			    				<p>极简笔记是一款非常简单实用的工具类小程序，它能让您非常快捷的记录您的日常生活</p>
+			    			</div>
+			    			<label>
+			    				<div>
+			    					<span>工具</span>
+			    					<span>方便快捷</span>
+			    				</div>
+			    				<span>点点<img class="erWeiMa" src="img/PC/index/er.png" /></span>
+			    			</label>
+			    		</a>
+					</div>
+					<span>查看更多</span>
+				</div>
+			</div>
+		</div>
+		
+		
+		<!-- 底部PC -->
+	    <div class="footer_pc">
+	    	<span>
+	    	<img src="img/PC/index/bottomLogo.png" />
+	    	<div>
+	    		<a href="index.html">精选</a>
+	    		<span></span>
+	    		<a href="class.html">类别</a>
+	    		<span></span>
+	    		<a href="theme.html">专题</a>
+	    		<span></span>
+	    		<a href="appraise.html">测评</a>
+	    	</div>
+	    	<p>Copyright © 2016 www.diandianchengxu.com. All Rights Reserved.</p>
+	    	<div>
+	    		<div><img src="img/PC/index/blogo.png" /></div>
+	    		<p>扫一扫关注点点程序</p>
+	    	</div>
+	    	</span>
+	    </div>
+		<!-- 底部 -->
+	    <div id="hideDiv"></div>
+	    <footer class="nav">
+	    	<a class="navBox" href="index.html">
+	    		<div><img src="img/bImg1.png" /></div>
+	    		<p>精选</p>
+	    	</a>
+	    	<a href="class.html" class="navBox">
+	    		<div><img src="img/bImgColor2.png" /></div>
+	    		<p class="activeFont">类别</p>
+	    	</a>
+	    	<a href="theme.html" class="navBox">
+	    		<div><img src="img/bImg3.png" /></div>
+	    		<p>专题</p>
+	    	</a>
+	    	<a href="appraise.html" class="navBox">
+	    		<div><img src="img/bImg4.png" /></div>
+	    		<p>测评</p>
+	    	</a>
+	    	<a href="index_my.html" class="navBox">
+	    		<div><img src="img/bImg5.png" /></div>
+	    		<p>我的</p>
+	    	</a>
+	    </footer>
+		<script type="text/javascript" src="js/main.js" ></script>
+		<script>
+//				setTimeout(function(){
+//					$(".guide_pc>div a").css("width","32%");	
+//				},100);
+				$(".con>a").height($(".con>a").width());
+				$(".con>a").each(function(index,item){
+					if(index%3 == 0 || index%3 == 1){
+						$(".con a").eq(index).css({
+							"border-right":"1px solid #e5e5e5",
+							"border-bottom":"1px solid #e5e5e5"
+						});
+					}
+					if(index%3 == 2){
+						$(".con a").eq(index).css("border-bottom","1px solid #e5e5e5");
+					}
+				});	
+				$(".xxPc>a").click(function(){
+					$(this).addClass("activeXXPcA").siblings("a").removeClass("activeXXPcA");
+				});
+				$(".classTitle_pc>a").click(function(){
+					$(this).addClass("activeFont").siblings("a").removeClass("activeFont");
+				});
+		</script>
+	</body>
+</html>

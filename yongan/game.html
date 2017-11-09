@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>安永offer</title>
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+<meta name="Keywords" content="安永offer" />
+<meta name="Description" content="安永offer" />
+<!-- Mobile Devices Support @begin -->
+<meta content="application/xhtml+xml;charset=UTF-8" http-equiv="Content-Type">
+<meta content="no-cache,must-revalidate" http-equiv="Cache-Control">
+<meta content="no-cache" http-equiv="pragma">
+<meta content="0" http-equiv="expires">
+<meta content="telephone=no, address=no" name="format-detection">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<!-- apple devices fullscreen -->
+<link href="css/style.css" rel="stylesheet">
+<link href="css/main.css" rel="stylesheet">
+<script src="js/jquery-1.8.2.min.js"></script>
+<script src="js/gameJquery.js"></script>
+<style>
+body {background:#73daff;}
+
+</style>
+</head>
+
+<body>
+<div class="gameQ" style=" overflow:hidden; width:100%; height:100%;">
+<article class="game-article" style="height:65%; background:url(images/img/tkBack.jpg) no-repeat; background-size:100% 100%;">
+	<figure><a href="index.html"><img src="images/img/logo.png"></a></figure>
+    <div class="game-yun" style="display:none;">加油！还有三关就到达终点！</div>
+    <section>
+    	<p class="game-section"></p>
+    	<p>距离终点：<span>5000</span>米</p>
+        <p>赛跑用时：<span>58’22</span>秒</p>
+    </section>
+</article>
+<article class="game-run" style="background:#ffd300 url(images/img/pao01.jpg) center center repeat-x; background-size:100% auto;">
+	<figure class="game-run-prodent"><img src="images/img/nv.png"></figure>
+    <figure class="game-run-pai"><img src="images/img/1.png"></figure>
+    <div class="game-run-click"><img src="images/img/arrowTop.gif"></div>
+</article>
+</div>
+<!--横屏代码-->
+<article class="game-cross">
+	<section>
+    	<figure><img src="images/img/logo.png"></figure>
+        <p>如果你想更好的参与活动，请竖屏参与！</p>
+    </section>
+</article>
+
+<!--结果弹出-->
+<!--<div class="game-end">
+	<article>
+    	<section class="gameend-setion">
+        	<p>恭喜你，跑了5000米时间是：5‘25秒</p>
+        </section>
+        <div class="game-endButton"><a href="javascript:void(0)">确定</a></div>
+    </article>
+</div>-->
+<script>
+$(".game-article ,.game-run ,.game-end").hide();
+$(window).load(function(){
+	btn_text("您今日的最佳成绩5’15秒","gameEnd.html");
+	/*游戏*/
+	$(".game-article ,.game-run").show();
+	$(".game-run").css({"background":"#ffd300 url(images/img/pao02.gif) center center repeat-x","background-size":"100% auto"})
+	var GameWidth=$(window).width(),
+		GameHeight=$(window).height();
+	if(GameWidth>GameHeight){
+		$(".game-cross").show();
+		}
+	var articleGame = setTimeout(function(){
+		$(".game-run-prodent img").attr({"src":"images/img/nv02.gif"})
+		$(".game-run-pai").css({"display":"block","left":"-80px"});
+		$(".game-run-pai").animate({"left":GameWidth/4},2000);
+		$(".game-yun").css({"display":"block","left":"-230px"});
+		$(".game-yun").animate({"left":(GameWidth-230)/2},2000);
+		},1000);
+	var articleGameOne = setTimeout(function(){
+		$(".game-run-click").css({"display":"block","left":GameWidth/4});
+		},3000)
+	$(".game-run-click").click(function(){
+		//$(".gameQ").css({"width":GameWidth ,"overflow":"hidden"})
+		$(".game-run-click").css({"display":"none"});
+		$(".game-run-pai").css({"left":"-80px"});
+		$(".game-run-pai").animate({"left":GameWidth/4},2000);
+		$(".game-yun").animate({"left":GameWidth-(GameWidth-230)/2},2000);
+		
+		var articleGameTwo = setTimeout(function(){
+			$(".game-run-click").css({"display":"block"});
+			$(".game-yun").css({"display":"none"});
+		},2000);
+	
+	})
+	})
+function btn_text(str, hr) {
+	$(".game-end").show();
+    $(".gameend-setion p").text(str);
+    $(".game-endButton a").click(function () {
+       $(this).attr("href", hr);
+    })
+
+}
+</script>
+</body>
+</html>

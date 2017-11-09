@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>安永offer</title>
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+<meta name="Keywords" content="安永offer" />
+<meta name="Description" content="安永offer" />
+<!-- Mobile Devices Support @begin -->
+<meta content="application/xhtml+xml;charset=UTF-8" http-equiv="Content-Type">
+<meta content="no-cache,must-revalidate" http-equiv="Cache-Control">
+<meta content="no-cache" http-equiv="pragma">
+<meta content="0" http-equiv="expires">
+<meta content="telephone=no, address=no" name="format-detection">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<!-- apple devices fullscreen -->
+<link href="css/style.css" rel="stylesheet">
+<link href="css/main.css" rel="stylesheet">
+<script src="js/jquery-1.8.2.min.js"></script>
+<script src="js/gameJquery.js"></script>
+<style>
+
+</style>
+</head>
+
+<body>
+<!--选择人物-->
+<div class="game-Figure">
+	<article>
+    	<aside>请选择游戏人物</aside>
+        <section class="game-figureImg">
+        	<figure class="on"><figcaption><img src="images/img/nan.jpg"></figcaption></figure>
+            <figure><figcaption><img src="images/img/nv.jpg"></figcaption></figure>
+        </section>
+        <section class="game-input">
+        	<p><label><input type="text" placeholder="请输入您的姓名"></label></p>
+        </section>
+        <section class="game-input">
+        	<p><label><input type="text" placeholder="请输入您的学校"></label></p>
+        </section>
+        <section class="game-input">
+        	<p><label><input type="text" placeholder="请输入您的专业"></label></p>
+        </section>
+        <section class="game-input">
+        	<p>
+            	<label>
+                	<select>
+                    	<option value="请输入您的毕业时间">请输入您的毕业时间</option>
+                    </select>
+                </label>
+            </p>
+        </section>
+        <!--<section class="game-input" style="margin-top:5px;">
+        	<p><label><input type="date" placeholder="请输入您的毕业时间" class="datapla"></label></p><p style="line-height:15px;">*请输入您的毕业时间</p>
+        </section>-->
+        <section class="game-input" style="margin-top:5px;"><p><label><input type="tel" pattern="[0-9]{11}" id="p" name="phone" placeholder="请输入正确的手机号码" autocomplete="off" required></label></p><p style="line-height:15px;">*请填写真实信息，这将是安永君发奖时核对的依据哦~
+</p></section>
+        <div class="game-button"><a href="javascript:void(0)">确定</a></div>
+    </article>
+</div>
+
+<!--提示框-->
+<div class="registeredText"></div>
+
+<!--横屏代码-->
+<article class="game-cross">
+	<section>
+    	<figure><img src="images/img/logo.png"></figure>
+        <p>如果你想更好的参与活动，请竖屏参与！</p>
+    </section>
+</article>
+
+<script>
+$(".game-Figure").hide();
+window.onload = function(){
+	$(".game-Figure").show();
+	}
+</script>
+<script>
+$(function(){
+	$(window).resize(function(){
+		$(":input").focus(function(){
+			$(".game-cross").hide();
+			})
+		})
+	})
+</script>
+</body>
+</html>

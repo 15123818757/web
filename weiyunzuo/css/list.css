@@ -1,0 +1,45 @@
+@charset "utf-8";
+/* CSS Document */
+html,body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td,article,section,figure,menu,li,ul,footer,time,aside{margin:0;padding:0;}
+body{font-family:微软雅黑;}
+html,body {}
+/*div,article,section,nav,header,footer,figure {height:auto; overflow:hidden;}*/
+ul,li{list-style:none;margin:0;padding:0;}
+h1, h2, h3, h4, h5, h6{font-weight:normal;} 
+img{border:none;border:0;vertical-align:middle;}
+a{text-decoration:none;outline:none;}
+p{margin:0;padding:0;}
+input,select,textarea{vertical-align:middle;}
+input{margin:0;outline:none;padding:0;}
+input::-ms-clear{display:none;}
+.clearfix:after{
+     content:".";       
+     display:block;       
+     height:0;       
+     clear:both;       
+     visibility:hidden;       
+
+}
+.clearfix{*zoom:1}
+
+/*case.html*/
+.case {background:url(../images/img/caseBack.png) no-repeat; background-size:100% 100%; padding:70px 0px 130px 0px;}
+.caseTop {width:1136px; margin:0px auto; text-align:center;}
+.caseTop figure {width:200px; margin:0px auto;}
+.caseTop figure img {width:100%; height:auto;}
+.caseTop aside {font:bold 24px/35px 微软雅黑; color:#000; margin:5px 0px 15px 0px;}
+.caseTop section {font:16px/26px 微软雅黑; color:#666;}
+.caseFigure {text-align:center; margin-top:-130px; -webkit-animation:linear bounceIn 1s 1;}
+.caseFigure img {width:700px;}
+.caseMian {background:url(../images/img/caseBack01.png) top center no-repeat; background-size:100% 50%; margin-top:-100px; padding-top:150px;}
+.caseofficial {text-align:center;}
+.caseofficial aside p:first-child {font:bold 45px/35px arial; color:#fdb815; margin-bottom:10px;}
+.caseofficial aside p:last-child {font:normal 16px/24px 微软雅黑; color:#666;}
+.caseofficial img {width:1000px;}
+.caseMun {background:url(../images/img/caseBack02.png) top center no-repeat; background-size:100% 50%; margin-top:-100px; padding:150px 0px;}
+
+@-webkit-keyframes bounceIn{
+	0%{opacity:0;-webkit-transform:scale(.3);transform:scale(.3)}
+	50%{opacity:1;-webkit-transform:scale(1.05);transform:scale(1.05)}
+	70%{-webkit-transform:scale(.9);transform:scale(.9)}
+	100%{opacity:1;-webkit-transform:scale(1);transform:scale(1)}}

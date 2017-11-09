@@ -1,0 +1,290 @@
+body{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+}
+#music{
+	position: fixed;
+	top: 10px;
+	right: 10px;
+	z-index: 9999;
+	width: 8%;
+}
+.music{
+	transform: rotateZ(0);
+	animation: music 2s linear infinite;
+	-webkit-animation: music 2s linear infinite;
+}
+@keyframes music{
+	from{transform: rotateZ(0deg)}
+	to{transform: rotateZ(360deg)}
+}
+@-webkit-keyframes music{
+	from{transform: rotateZ(0deg)}
+	to{transform: rotateZ(360deg)}
+}
+.box{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	
+	transition: 0.5s;
+}
+
+.box>div:nth-of-type(2){
+	background: white;
+}
+body>span{
+	position: absolute;
+	width: 100%;
+	height: 1%;
+	background: #f1511b;
+	bottom: 0;
+	left: 0;
+	z-index: 999;
+}
+.num{
+	color: white;
+	position: absolute;
+	width: 100%;
+	top: 0;
+	left: 0;
+	transition: 0.5s;
+}
+
+.logo{
+	width: 70%;
+	position: absolute;
+	display: block;
+	margin: auto;
+	top: 30%;
+	left: 15%;
+}
+.logo img{
+	position: absolute;
+	display: block;
+	opacity: 0;
+}
+.logo img:nth-of-type(1){
+	width: 36.6%;
+	top: 0;
+	left: 0;
+}
+.logo img:nth-of-type(2){
+	width: 63.4%;
+	right: 0;
+	top: 0;
+}
+.logo img:nth-of-type(3){
+	width: 63.4%;
+	right: 0;
+	top: 45%;
+}
+
+.logo1{
+	transform: translateX(0);
+	opacity: 1 !important;
+	animation: logoAni1 0.5s linear;
+	-webkit-animation: logoAni1 0.5s linear;
+}
+@keyframes logoAni1{
+	from{transform:translateX(-10%);opacity: 0;}
+	to{transform:translateX(0%);opacity: 1;}
+}
+@-webkit-keyframes logoAni1{
+	from{transform:translateX(-10%);opacity: 0;}
+	to{transform:translateX(0%);opacity: 1;}
+}
+.logo2{
+	transform: translateX(0);
+	opacity: 1 !important;
+	animation: logoAni2 0.5s linear;
+	-webkit-animation: logoAni2 0.5s linear;
+}
+@keyframes logoAni2{
+	from{transform:translateX(10%);opacity: 0;}
+	to{transform:translateX(0%);opacity: 1;}
+}
+@-webkit-keyframes logoAni2{
+	from{transform:translateX(10%);opacity: 0;}
+	to{transform:translateX(0%);opacity: 1;}
+}
+.logo3{
+	transform: translateX(0);
+	opacity: 1 !important;
+	animation: logoAni3 0.8s linear;
+	-webkit-animation: logoAni3 0.8s linear;
+}
+@keyframes logoAni3{
+	from{transform:translateX(10%);opacity: 0;}
+	to{transform:translateX(0%);opacity: 1;}
+}
+@-webkit-keyframes logoAni3{
+	from{transform:translateX(10%);opacity: 0;}
+	to{transform:translateX(0%);opacity: 1;}
+}
+
+.logo4{
+	transform: translateX(0);
+	opacity: 1 !important;
+	animation: logoAni3 1.1s linear;
+	-webkit-animation: logoAni3 1.1s linear;
+}
+@keyframes logoAni4{
+	from{transform:translateX(10%);opacity: 0;}
+	to{transform:translateX(0%);opacity: 1;}
+}
+@-webkit-keyframes logoAni4{
+	from{transform:translateX(10%);opacity: 0;}
+	to{transform:translateX(0%);opacity: 1;}
+}
+#next{
+	position: absolute;
+	bottom: 3%;
+	width: 100%;
+	text-align: center;
+	transform: translateY(0);
+	opacity: 1;
+	animation: goNext 1.5s linear infinite;
+	-webkit-animation: goNext 1.5s linear infinite;
+}
+#next img{
+	width: 20px;
+}
+@keyframes goNext{
+	from{transform: translateY(0);opacity: 1;}
+	to{transform: translateY(50%);opacity: 0;}
+}
+@-webkit-keyframes goNext{
+	from{transform: translateY(0);opacity: 1;}
+	to{transform: translateY(50%);opacity: 0;}
+}
+.jump{
+	text-align: center;
+	position: absolute;
+	top: 53%;
+	left: 0;
+	width: 100%;
+	color: white;
+}
+.jump span{
+	margin-left: -2px;
+	opacity: 0;
+	transition: 0.2s;
+	display: inline-block;
+	font-size: 15px;
+}
+.jump label{
+	font-size: 20px;
+	margin-left: -3px;
+	opacity: 0;
+	transition: 0.2s;
+	display: inline-block;
+}
+
+.cc{
+	opacity: 1 !important;
+	transform: translateY(0);
+	animation: goUp 0.5s linear;
+	-webkit-animation: goUp 0.5s linear;
+}
+
+
+@keyframes goUp{
+	0%{transform: translateY(0);}
+	40%{transform: translateY(-50%);}
+	60%{transform: translateY(20%);}
+	100%{transform: translateY(0);}
+}
+@-webkit-keyframes goUp{
+	0%{transform: translateY(0);}
+	40%{transform: translateY(-50%);}
+	60%{transform: translateY(20%);}
+	100%{transform: translateY(0);}
+}
+
+.swiper-container{
+	width: 100%;
+	height: 100%;
+}
+.swiper-slide{
+	position: relative;
+}
+.swiper-wrapper>div:nth-of-type(2),.swiper-wrapper>div:nth-of-type(3),.swiper-wrapper>div:nth-of-type(4){
+	background: white;
+}
+.bgImg1{
+	background: url(../img/index/img1.png) no-repeat center top;
+	background-size:100%;
+}
+.bgImg2{
+	background: url(../img/index/img2.png) no-repeat center top;
+	background-size:100%;
+}
+.bgImg3{
+	background: url(../img/index/img3.png) no-repeat center top;
+	background-size:100%;
+}
+.bannerImg{
+	width: 100%;
+	height: 60%;
+	transition: 1.5s;
+	opacity: 0;
+}
+.activeBanImg{
+	opacity: 1;
+}
+
+.bannerContent{
+	padding: 3%;
+	box-sizing: border-box;
+	overflow: hidden;
+	color: #252525;
+}
+.bannerContent p:nth-of-type(1){
+	font-size: 16px;
+	position: relative;
+	padding-bottom: 8px;
+}
+.bannerContent p span{
+	position: absolute;
+	display: block;
+	width: 20px;
+	height: 2px;
+	background: #f1511b;
+	bottom: 0;
+	left: 0;
+}
+.bannerContent p{
+	font-size: 14px;
+	opacity: 0;
+	color: #4b4b4b;
+	margin: 3% 0;
+	transition: 0.5s;
+	line-height: 20px;
+}
+.bannerContent p:nth-of-type(1){
+	font-size: 17px;
+	color: #252525;
+	position: relative;
+	padding-bottom: 8px;
+}
+
+
+
+
+.swiper-container{
+	background: #231f20;
+}
+
+.swiper-wrapper>div:nth-of-type(1){
+	background: white;
+}
+.swiper-wrapper>div:nth-of-type(2){
+	background: #231f20;
+}
+.swiper-wrapper>div:last-child{
+	background: #231f20;
+}

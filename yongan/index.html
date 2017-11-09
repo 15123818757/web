@@ -1,0 +1,150 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>安永offer</title>
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+<meta name="Keywords" content="安永offer" />
+<meta name="Description" content="安永offer" />
+<!-- Mobile Devices Support @begin -->
+<meta content="application/xhtml+xml;charset=UTF-8" http-equiv="Content-Type">
+<meta content="no-cache,must-revalidate" http-equiv="Cache-Control">
+<meta content="no-cache" http-equiv="pragma">
+<meta content="0" http-equiv="expires">
+<meta content="telephone=no, address=no" name="format-detection">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<!-- apple devices fullscreen -->
+<link rel="stylesheet" type="text/css" href="css/mian.css">
+<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		html,body{
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+		}
+		.container{
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			left: 0;
+			top: 0%;
+		}
+		.container .page{
+			height: 100%;
+			position: relative;
+		}
+		
+	</style>
+	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
+    <script type="text/javascript">
+		$(document).ready(
+			function() {
+				var nowpage = 0;
+				//给最大的盒子增加事件监听
+				$(".container").swipe(
+					{
+						swipe:function(event, direction, distance, duration, fingerCount) {
+							 if(direction == "up"){
+								if(nowpage=="1"){
+									false;
+									}else{
+							 			nowpage = nowpage + 1;
+									}
+							 }else if(direction == "down"){
+							 	nowpage = nowpage - 1;
+							 }
+
+							 if(nowpage > 4){
+							 	nowpage = 4;
+							 }
+
+							 if(nowpage < 0){
+							 	nowpage = 0;
+							 }
+
+							$(".container").animate({"top":nowpage * -100 + "%"},400);
+
+							$(".page").eq(nowpage).addClass("cur").siblings().removeClass("cur");
+						}
+					}
+				);
+			}
+		);
+	</script>
+</head>
+
+<body onmousewheel="return false;">
+<div class="container">
+    <div class="page page1" style="position:relative;">
+        <article class="index-page">
+            <figure class="index-page-top"><img src="images/img/indexBannerTop.jpg"></figure>
+            <section>
+                <article>
+                <p>时间：2015年9月1日至9月15日</p>
+                <p>每周排行第一的同学将获得</p>
+                <p><span>2015安永校园招聘笔试直通车门票</span></p>
+                <p>每天排名前十的同学更有机会领取<br/>安永限量版珍藏礼品</p>
+                <p><img src="images/img/prize.jpg" width="180"></p>
+                </article>
+            </section>
+            <figure class="index-foter"><img src="images/img/indexBannerbottom.jpg"></figure>
+            <p class="indexP-mian"><img src="images/img/arrowJ.png"></p>
+        </article>
+    </div>
+    <div class="page page2" style="background:url(images/img/xuanBack.jpg) center left no-repeat; background-size:100% 100%; position:relative; display: -webkit-box; display: -webkit-flex; display: -moz-box; display: -moz-flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -moz-box-align: center; -ms-flex-pack:center; -webkit-justify-content: center;
+-moz-justify-content: center; justify-content: center; -webkit-box-pack: center; -moz-box-pack: center; -ms-flex-align:center; -webkit-align-items: center; -moz-align-items: center; align-items: center;">
+    	<div class="m-page-img">
+            <figure><img src="images/img/huodong.jpg"></figure>
+            <div class="n-pageButtm">
+                <div class="gameEnd-button">
+                    <div class="game-button game-buttonone"><a href="gameName.html">开始游戏</a></div>
+                    <div class="game-button"><a href="RankingList.html">查看我的排名</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--横屏代码-->
+<article class="game-cross">
+	<section>
+    	<figure><img src="images/img/logo.png"></figure>
+        <p>如果你想更好的参与活动，请竖屏参与！</p>
+    </section>
+</article>
+
+<script>
+$(function(){
+	window.onload=function(){
+		var Wh=$(window).height(),
+		Ww=$(window).width(),
+		indexPge=$(".index-page .index-page-top img").height(),
+		indexFigu=$(".index-page .index-foter").height(),
+		indexH=0;
+		indexH=Wh-indexPge-indexFigu;
+		if(indexH>120){
+		$(".index-page section").addClass("sec-index");
+		$(".index-page .sec-index").height(indexH);
+		}
+		if(Ww>Wh){
+			$(".game-cross").show();
+		}else{
+			$(".game-cross").hide();
+			}
+	}
+	$(window).resize(function(){
+		var Wh=$(window).height(),
+		Ww=$(window).width();
+		if(Ww>Wh){
+			$(".game-cross").show();
+		}else{
+			$(".game-cross").hide();
+			}
+		})
+	})
+</script>
+</body>
+</html>

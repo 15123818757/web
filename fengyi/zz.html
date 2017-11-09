@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<audio id="audio" src="music/bg1.mp3" loop="loop" >
+			<source src="music/bg1.mp3"></source>
+		</audio>
+		<script>
+			window.onload = function(){
+				var myMusic = document.getElementById("audio");
+				myMusic.play();
+				document.addEventListener("WeixinJSBridgeReady", function() {
+					var myMusic = document.getElementById("audio");
+					myMusic.play();
+				});
+			}
+		</script>
+	</body>
+</html>

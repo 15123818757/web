@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	    <title>丰亦实业</title>
+	    <link rel="stylesheet" href="css/public.css" />
+	    <link rel="stylesheet" href="css/index.css" />
+	    <link rel="stylesheet" href="css/swiper.min.css" />
+	    <script type="text/javascript" src="js/jquery-1.7.2.min.js" ></script>
+	    <script type="text/javascript" src="js/preload.min.js" ></script>
+	</head>
+	<body>
+		<!-- 音乐按钮 -->
+		<img id="music" src="img/music.png" />
+		<!-- bg音乐 -->
+		<audio id="audio" src="music/bg1.mp3" loop="loop" autoplay="autoplay">
+			<source src="music/bg1.mp3"></source>
+		</audio>
+		<div class="box scroll">
+			<div class="swiper-container">
+		        <div class="swiper-wrapper">
+		            <div class="swiper-slide">
+		            	<div class="logo">
+							<img src="img/s_logo_01.png" />
+							<img src="img/s_logo_02.png" />
+							<img src="img/s_logo_03.png" />
+						</div>
+						<p class="jump">
+							<span>让</span>
+							<span>您</span>
+							<span>的</span>
+							<label>包</label>
+							<label>装</label>
+							<span>会</span>
+							<label>说</label>
+							<label>话</label>
+							<label>！</label>
+						</p>
+		            </div>
+		            <div class="swiper-slide">
+		            	<div class="bannerImg bgImg1"></div>
+		            	<div class="bannerContent">
+		            		<p>公司简介<span></span></p>
+		            		<p>我们是一家秉承诚信，以专业和创新为理念。公司专注提供食品包装容器，涵盖食品包装的生产及印刷，餐饮连锁的整体规划建议，以及针对性选择等一系列服务。</p>
+		            		<p>我们是一个由年轻人组成的团队。部门包括业务部，设计部和生产部。</p>
+		            	</div>
+		            </div>
+		            <div class="swiper-slide">
+		            	<div class="bannerImg bgImg2"></div>
+		            	<div class="bannerContent">
+		            		<p>公司简介<span></span></p>
+		            		<p>我们以“为客户提供优质的服务和产品”为宗旨，使您真正的感受到客户至上。</p>
+		            		<p>我们以“让您的包装会说话”为使命，为您量身打造最适合您的产品。</p>
+		            	</div>
+		            </div>
+		            <div class="swiper-slide">
+		            	<div class="bannerImg bgImg3"></div>
+		            	<div class="bannerContent">
+		            		<p>公司简介<span></span></p>
+		            		<p>我们以“为客户提供最优搭配的一站式服务”为愿景，给到您超越产品意外的个性化服务方案。在这里，您不仅获得产品，更能带给您便捷，快乐以及享受！</p>
+		            	</div>
+		            </div>
+		        </div>
+		    </div>
+		</div>
+		<div id="next"><img src="img/next.png" /></div>
+		<span></span>
+		<!--loading-->
+		<div class="loading" style="width:100%; height:100%; background:#fff url(img/loading.gif) center center no-repeat; background-size:40px auto; position:fixed; top:0px; left:0px; z-index:99999;">
+			<span id="num" style="display: block;text-align: center;height: 100%;font-size: 14px;">0%</span>
+		</div>
+		<script>
+			var scrHei = document.body.clientHeight;
+			var scrWid = document.body.clientWidth;
+			$("#num").css("line-height",scrHei*1.14+"px");	
+			var W = $(window).width(),
+					H = $(window).height();
+			$(".loading").css({ "width": W, "height": H });
+		</script>
+		<script type="text/javascript" src="js/swiper.jquery.min.js" ></script>
+		<script type="text/javascript" src="js/index.js" ></script>
+	</body>
+</html>

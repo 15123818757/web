@@ -1,0 +1,1225 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	    <title>点点程序</title>
+	    <link rel="stylesheet" href="css/public.css" />
+	    <link rel="stylesheet" href="css/article.css" />
+	    <link rel="stylesheet" href="css/detail.css" />
+	    <link rel="stylesheet" href="css/main.css" />
+	    <script type="text/javascript" src="js/jquery-1.7.2.min.js" ></script>
+	    <style>
+	    	@media only screen and (min-width: 100px) and (max-width: 640px) {
+	    		.header{display: none;}
+	    	}
+	    	@media only screen and (min-width: 640px) and (max-width: 10000px) {
+	    		.headerd{display: none;}
+	    		.con{display: none;}
+				.d_box{display: none;}
+				.hidePub{display: none;}
+				.pubBox{display: none;}	    		
+	    	}
+	    	.aa{padding-bottom: 10px;}
+	    	.aa>a>img{width: 65px !important;}
+	    	.aa>a:last-child{border: 1px solid #e5e5e5;color: #9e9e9e;font-size: 14px;text-align: center;line-height: 35px;}
+	    	.aa>a>div{width: 60%;}
+	    	.aa>a>div>p{font-size: 15px;color: #353535;line-height: 35px;}
+	    	.aa>a>div>p span{padding: 2px 5px;background: #f1f1f1;color: #ababab;font-size: 12px;margin-right: 10px;}
+	    	.swiper-container_pc{float: none !important;width: 100% !important;overflow: hidden;margin-top: 30px;position: relative;}
+	    	.swiper-container_pc>.swiper-wrapper{position: static !important;}
+	    	.swiper-container_pc>.swiper-wrapper>div>img{cursor: pointer;}
+	    	.swiper-button-prev,.swiper-button-next{top: 50% !important;right: 0 !important;z-index: 10000;background-size:70%;}
+	    	.swiper-button-next{right: 1% !important;}
+	    	.swiper-button-prev{left: 0%;}
+	    	.pc_num{float: none !important;width: 100% !important;margin-top: 10px;}
+	    	.pc_num>span{color: #ffc343;font-size: 60px;letter-spacing: 5px;}
+	    	.pc_num>div{position: static !important;display: inline-block;vertical-align: top;padding-top: 20px;padding-left: 20px; }
+	    	.pc_num>div>div>img{width: 15px;margin-right: 5px;}
+	    	.pc_num>div>span{line-height: 40px;font-size: 14px;color: #919191;}
+	    	.pc_formDetail{padding-bottom: 50px;}
+	    	.pc_allPL>div>div>p{line-height: 55px;}
+	    	.pc_allPL>div>p{line-height: 25px;margin-top: -10px;}
+	    	.artTitle{border-bottom: none !important;position: relative;}
+	    	.artTitle>div{border-bottom: 1px solid #f1f1f1;width: 100% !important;float: none !important;padding-bottom: 20px;}
+	    	.artTitle>div>p:nth-of-type(1){font-size: 20px !important;color: #545454;line-height: 60px;font-weight: bold;}
+	    	.artTitle>div>p:nth-of-type(2){font-size: 14px !important;color: #adadad;line-height: 35px;}
+	    	.artTitle>div>p:nth-of-type(2)>span{font-size: 14px !important;color: #c4c4c4 !important;}
+	    	.artTitle>div>p span{margin-right: 60px;}
+	    	.artTitle>div>p img{width: 20px !important;display: inline-block;transform: translateY(2px);margin-right: 10px !important;}
+	    	.artTitle>div>p img:nth-of-type(2){margin-left: 50px;}
+	    	.artTitle>div>span{position: absolute;right: 30px;top: 30px;}
+	    	.atrCon{padding-top: 0 !important;border-bottom: none !important;padding-bottom: 0 !important;}
+	    	.atrCon>div{float: none !important;width: 100% !important;    border-bottom: 1px solid #f1f1f1;padding-bottom: 30px;}
+	    	.atrCon>div>p{font-size: 14px !important;color: #515151 !important;line-height: 30px !important;margin-top: 0 !important;}
+	    	.atrCon>div>label{display: block;font-size: 16px !important;color: #687aff !important;line-height: 45px !important;font-weight: bold;}
+	    	.atrCon>div>a{position: static !important;float: left;background: no-repeat !important;color: #545454 !important;font-size: 14px !important;padding:0 !important;line-height: 50px;}
+	    	.atrCon>div:nth-of-type(2){border-bottom: none !important;}
+	    	.atrCon>div>a:nth-of-type(2){float: right;}
+	    	.atrCon>div>a:hover{color: #58c8a2 !important;}
+	    </style>
+	</head>
+	<body>
+		<header class="header">
+			<span>
+			<a href="index.html"><img src="img/logo.png" /></a>
+			<a><img id="search" src="img/search.png" /></a>
+			<div>
+				<a href="index.html">精选</a>
+				<a href="class.html">类别</a>
+				<a href="theme.html">专题</a>
+				<a class="activeFont" href="appraise.html">测评</a>
+			</div>
+			<div>
+				<div>
+					<input type="text" placeholder="搜索你喜欢的" />
+					<a href="result.html"><img src="img/search.png" /></a>
+				</div>
+				<span class="login">登录</span>
+				<span class="userLogoTop"><img src="img/my/userLogo.png" /></span>
+			</div>
+			</span>
+		</header>
+		<div class="pc_headerBox" style="height: 70px;"></div>
+		<!-- 登录框 -->
+		<div class="loginBox">
+			<div>
+				<!-- 关闭按钮 -->
+				<span>
+					<span>
+						<span></span>
+						<span></span>
+					</span>
+				</span>
+				<img src="img/logo.png" />
+				<p><span></span>快捷登录<span></span></p>
+				<div>
+					<a href="index_my.html">
+						<img src="img/my/qq.png" />
+						<p>QQ登录</p>
+					</a>
+					<a>
+						<img src="img/my/wx.png" />
+						<p>微信登录</p>
+					</a>
+					<a>
+						<img src="img/my/xl.png" />
+						<p>新浪登录</p>
+					</a>
+				</div>
+			</div>
+		</div>
+		<!-- PC 回到顶部 -->
+		<div class="goTop">
+			<div><img src="img/PC/index/rightIcon1.png" /><a><span>免费</span><span>发布</span></a></div>
+			<div><img src="img/PC/index/rightTip.png" /><a><span>关注</span><span>点点</span></a><img class="rightLogo" src="img/PC/index/blogo.png" /></div>
+			<div id="goTop_pc"><img src="img/PC/index/goTop.png" /><a><span>回到</span><span>顶部</span></a></div>
+		</div>
+		<!-- 头部 -->
+		<header class="headerd">
+			<div>
+				<img src="img/article/detailImg1.png" />	
+			</div>
+			<span></span>
+			<p>没车也能自驾游！端午出行，就用它快速租车！！！</p>
+		</header>
+		<!-- 文章内容 -->
+		<section class="con">
+			<p class="con_p1">汇率一天一个价，汇率表更像是海淘党的心情晴雨表。哎呀！上个月的包包早知道不买好了！最近美元又跌了!人民币还在升值！夏天咱们去欧洲吧.....</p>
+			<p class="con_p1">不管是在国外生活还是旅游购物，我们巴不得身边放着个银行的汇率大屏幕。</p>
+			<p class="con_p2">以前每次要查汇率的时候头都是很大。只知道1美元大概换6.xx人民币，却不知道具体数额。</p>
+			<p class="con_p1">今天，点点程序给你推荐4宽汇率小程序，即能秒算汇率，看着也舒服，让你随时掌握汇率情况。</p>
+			<p class="con_p3">1.极简汇率</p>
+			<p class="con_p1">极简汇率界面超级简洁，4个主流币种配上一个宫格输入框！</p>
+			<p class="con_p1">当我们点击到美元的时候，自动会为我们算出折合后的人民币数值，真是一目了然。</p>
+			<img src="img/article/detailImg2.png" />
+			<p class="con_p1">虽然名叫、（极简汇率），但是币种还是挺多样的。</p>
+			<p class="con_p1">如果我们要切换默认币种，点击货币英文旁的小箭头，就可以跳转出像右图这样的币选择框。<b>从人民币到毛里求斯卢比，主流的币种都有所涵盖。</b></p>
+		</section>
+		
+		<!-- pc的内容 -->
+		<div class="detailePcContent resultContent">
+			<p>
+				<a href="appraise.html">测评</a>
+				<img src="img/PC/next.png"  />
+				<a>没车也能自驾游</a>
+			</p>
+			<div class="cpLeftBox">
+				<!-- 测评详情标题 -->
+				<div class="artTitle">
+					<div>
+						<p>没车也能自驾游！端午出行，就用它快速租车！</p>
+						<p>
+							<span>6小时前</span>
+							<img src="img/article/heart.png" />46
+							<img src="img/article/pao.png" />12
+						</p>
+						<span>
+							<!-- JiaThis Button BEGIN -->
+							<div class="jiathis_style_24x24">
+								<a class="jiathis_button_qzone"></a>
+								<a class="jiathis_button_tsina"></a>
+								<a class="jiathis_button_tqq"></a>
+								<a class="jiathis_button_weixin"></a>
+								<a class="jiathis_button_renren"></a>
+								<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+							</div>
+							<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+							<!-- JiaThis Button END -->
+							<!--<a><img src="img/PC/detail/qq.png" /></a>
+							<a><img src="img/PC/detail/wx.png" /></a>
+							<a><img src="img/PC/detail/qqzone.png" /></a>
+							<a><img src="img/PC/detail/xl.png" /></a>-->
+						</span>
+					</div>
+				</div>
+				<!-- 正文 -->
+				<div class="atrCon">
+					<div>
+						<p>在微信群发起一场投票，有哪些得心应手的投票小程序呢？</p>
+						<p>除了亲儿子腾讯投票，以及它的挑战者投票帮。还要给大家介绍一款专门的投票小程序。</p>
+						<p>这个叫「群统计」的小程序，可以让你轻松发起投票、分享投票、参与投票，以及统计投票结果。</p>
+						<p>下面，我们就来看一看这款小程序的真身。</p>
+						<label>界面设计</label>
+						<p>作为一款投票小程序，「群统计」的界面设计简单，容易操作。</p>
+						<p>点击界面最下方的「发起投票」按钮，可以分别选择「点击创建新投票」或「以原有投票为模板」。</p>
+						<label>操作方法</label>
+						<p>具体要怎么操作呢？很简单，只需要点击「发起投票」，进入「创建投票」。</p>
+						<p>接着，完成「输入投票题目」、「新选项内容」、「截止时间」等投票要求，即可快速地发起一轮投票。</p>
+						<label>亮点亮点亮点（重要的事情讲三遍）</label>
+						<p>具体要怎么操作呢？很简单，只需要点击「发起投票」，进入「创建投票」。</p>
+						<p>通过「转发」，可让好友快速加入此轮投票，非常方便快捷。</p>
+						<p>亮点亮点亮点（重要的事情讲三遍）</p>
+						<p>跟其他投票小程序不同的是，这款小程序可通过「热门投票」，关注你喜欢的事件。</p>
+						<p>你不仅可以参与此项事件的投票，也可对其发表看法。对于热门投票的结果，可在「我关注的」查看。</p>
+						<p>举个例子来说，最近，你对王者荣耀是否有罪这一事件比较感兴趣。你可以在「热门投票」中，选择参与这一事件的投票。</p>
+						<p>在「我关注的」中，查看这一事件的相关投票。</p>
+					</div>
+					<div>
+						<a>上一篇：微信小程序又在搞事情了</a>
+						<a>下一篇：微信小程序开发文档</a>	
+					</div>
+					
+				</div>
+				<!-- 介绍 -->
+				<div>
+					<!-- 表单 -->
+					<form class="pc_formDetail">
+						<textarea placeholder="说说你的看法吧！"></textarea>
+						<button>提交</button>
+					</form>
+					<!-- 全部评论 -->
+					<div class="pc_allPL">
+						<p>全部评论（103）</p>
+						<div>
+							<img src="img/my/userLogo.png" />
+							<div>
+								<p>奥特曼</p>
+							</div>
+							<p>这是什么东西这是什么东西这是什么东西这是什么东西这是什么东西这是什么东西这是什么东西这是什么东西这是什么东西这是什么东西这是什么东西这是什么东西这是什么东西这是什么东西这是什么东西这是什么东西这是什么东西这是什么东西这是什么东西这是什么东西这是什么东西这是什么东西这是什么东西这是什么东西这是什么东西这是什么东西</p>
+							<span>今天</span>
+						</div>
+						<div>
+							<img src="img/my/userLogo.png" />
+							<div>
+								<p>奥特曼</p>
+							</div>
+							<p>今天天气不错</p>
+							<span>今天</span>
+						</div>
+						<span>查看更多评论</span>
+					</div>
+				</div>
+				<!-- 截图 -->
+			</div>
+			<div class="cpRightBox">
+				<div>
+					<p>
+						<label></label>
+						<span>热门文章</span>
+					</p>
+					<a>
+						<img src="img/PC/apprise/img5.jpg"/>
+						<div>
+							<p>微信小程序又在搞事情啦！微信小程序又在搞事情啦</p>
+							<span><img src="img/article/heart.png" />45<img src="img/article/pao.png" />12</span>
+						</div>
+					</a>
+					<a>
+						<img src="img/PC/apprise/img5.jpg"/>
+						<div>
+							<p>微信小程序又在搞事情啦！微信小程序又在搞事情啦</p>
+							<span><img src="img/article/heart.png" />45<img src="img/article/pao.png" />12</span>
+						</div>
+					</a>
+					<a>
+						<img src="img/PC/apprise/img5.jpg"/>
+						<div>
+							<p>微信小程序又在搞事情啦！微信小程序又在搞事情啦</p>
+							<span><img src="img/article/heart.png" />45<img src="img/article/pao.png" />12</span>
+						</div>
+					</a>
+					<a>
+						<img src="img/PC/apprise/img5.jpg"/>
+						<div>
+							<p>微信小程序又在搞事情啦！微信小程序又在搞事情啦</p>
+							<span><img src="img/article/heart.png" />45<img src="img/article/pao.png" />12</span>
+						</div>
+					</a>
+					<a>
+						<img src="img/PC/apprise/img5.jpg"/>
+						<div>
+							<p>微信小程序又在搞事情啦！微信小程序又在搞事情啦</p>
+							<span><img src="img/article/heart.png" />45<img src="img/article/pao.png" />12</span>
+						</div>
+					</a>
+				</div>
+				<div class="aa">
+					<p>
+						<label></label>
+						<span>精选推荐</span>
+					</p>
+					<a>
+						<img src="img/PC/index/cpLogo2.png"/>
+						<div>
+							<p>驴妈妈</p>
+							<p><span>工具</span><span>方便快捷</span></p>
+						</div>
+					</a>
+					<a>
+						<img src="img/PC/index/cpLogo3.png"/>
+						<div>
+							<p>驴妈妈</p>
+							<p><span>工具</span><span>方便快捷</span></p>
+						</div>
+					</a>
+					<a>
+						<img src="img/PC/index/cpLogo4.png"/>
+						<div>
+							<p>驴妈妈</p>
+							<p><span>工具</span><span>方便快捷</span></p>
+						</div>
+					</a>
+					<a>
+						<img src="img/PC/index/cpLogo3.png"/>
+						<div>
+							<p>驴妈妈</p>
+							<p><span>工具</span><span>方便快捷</span></p>
+						</div>
+					</a>
+					<a>
+						<img src="img/PC/index/cpLogo1.png"/>
+						<div>
+							<p>驴妈妈</p>
+							<p><span>工具</span><span>方便快捷</span></p>
+						</div>
+					</a>
+					<a>查看更多</a>
+				</div>
+			</div>
+		</div>
+		
+		
+		
+		
+		<!-- 评论 -->
+		<div class="d_box comment">
+			<p>
+				<span>全部评论</span>
+				<span>（107）</span>
+				<label></label>
+			</p>
+			<div class="score com_box">
+				<div><img src="img/detail/userLogo.png" /></div>
+				<div>
+					<p>无敌小朋友</p>
+					<div>
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start2.png" />
+					</div>					
+				</div>
+				<p>这个软件真是逆天了！这个软件真是逆天了！这个软件真是逆天了！这个软件真是逆天了！这个软件真是逆天了！这个软件真是逆天了！这个软件真是逆天了！这个软件真是逆天了！这个软件真是逆天了！</p>
+				<span>今天</span>
+			</div>
+			<div class="score com_box">
+				<div><img src="img/detail/userLogo.png" /></div>
+				<div>
+					<p>无敌小朋友</p>
+					<div>
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start2.png" />
+					</div>
+				</div>
+				<p>这个软件真是逆天了！</p>
+				<span>今天</span>
+			</div>
+			<div class="score com_box">
+				<div><img src="img/detail/userLogo.png" /></div>
+				<div>
+					<p>无敌小朋友</p>
+					<div>
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start2.png" />
+					</div>
+				</div>
+				<p>这个软件真是逆天了！</p>
+				<span>今天</span>
+			</div>
+			<div class="score com_box">
+				<div><img src="img/detail/userLogo.png" /></div>
+				<div>
+					<p>无敌小朋友</p>
+					<div>
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start2.png" />
+					</div>
+				</div>
+				<p>这个软件真是逆天了！</p>
+				<span>今天</span>
+			</div>
+			<div class="score com_box">
+				<div><img src="img/detail/userLogo.png" /></div>
+				<div>
+					<p>无敌小朋友</p>
+					<div>
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start2.png" />
+					</div>
+				</div>
+				<p>这个软件真是逆天了！</p>
+				<span>今天</span>
+			</div>
+			<div class="score com_box">
+				<div><img src="img/detail/userLogo.png" /></div>
+				<div>
+					<p>无敌小朋友</p>
+					<div>
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start2.png" />
+					</div>
+				</div>
+				<p>这个软件真是逆天了！</p>
+				<span>今天</span>
+			</div>
+			<div class="score com_box">
+				<div><img src="img/detail/userLogo.png" /></div>
+				<div>
+					<p>无敌小朋友</p>
+					<div>
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start2.png" />
+					</div>
+				</div>
+				<p>这个软件真是逆天了！</p>
+				<span>今天</span>
+			</div>
+			<div class="score com_box">
+				<div><img src="img/detail/userLogo.png" /></div>
+				<div>
+					<p>无敌小朋友</p>
+					<div>
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start2.png" />
+					</div>
+				</div>
+				<p>这个软件真是逆天了！</p>
+				<span>今天</span>
+			</div>
+			<div class="score com_box">
+				<div><img src="img/detail/userLogo.png" /></div>
+				<div>
+					<p>无敌小朋友</p>
+					<div>
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start2.png" />
+					</div>
+				</div>
+				<p>这个软件真是逆天了！</p>
+				<span>今天</span>
+			</div>
+			<div class="score com_box">
+				<div><img src="img/detail/userLogo.png" /></div>
+				<div>
+					<p>无敌小朋友</p>
+					<div>
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start2.png" />
+					</div>
+				</div>
+				<p>这个软件真是逆天了！</p>
+				<span>今天</span>
+			</div>
+			<div class="score com_box">
+				<div><img src="img/detail/userLogo.png" /></div>
+				<div>
+					<p>无敌小朋友</p>
+					<div>
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start2.png" />
+					</div>
+				</div>
+				<p>这个软件真是逆天了！</p>
+				<span>今天</span>
+			</div>
+			<div class="score com_box">
+				<div><img src="img/detail/userLogo.png" /></div>
+				<div>
+					<p>无敌小朋友</p>
+					<div>
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start2.png" />
+					</div>
+				</div>
+				<p>这个软件真是逆天了！</p>
+				<span>今天</span>
+			</div>
+			<div class="score com_box">
+				<div><img src="img/detail/userLogo.png" /></div>
+				<div>
+					<p>无敌小朋友</p>
+					<div>
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start2.png" />
+					</div>
+				</div>
+				<p>这个软件真是逆天了！</p>
+				<span>今天</span>
+			</div>
+			<div class="score com_box">
+				<div><img src="img/detail/userLogo.png" /></div>
+				<div>
+					<p>无敌小朋友</p>
+					<div>
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start2.png" />
+					</div>
+				</div>
+				<p>这个软件真是逆天了！</p>
+				<span>今天</span>
+			</div>
+			<div class="score com_box">
+				<div><img src="img/detail/userLogo.png" /></div>
+				<div>
+					<p>无敌小朋友</p>
+					<div>
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start2.png" />
+					</div>
+				</div>
+				<p>这个软件真是逆天了！</p>
+				<span>今天</span>
+			</div>
+			<div class="score com_box">
+				<div><img src="img/detail/userLogo.png" /></div>
+				<div>
+					<p>无敌小朋友</p>
+					<div>
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start2.png" />
+					</div>
+				</div>
+				<p>这个软件真是逆天了！</p>
+				<span>今天</span>
+			</div>
+			<div class="score com_box">
+				<div><img src="img/detail/userLogo.png" /></div>
+				<div>
+					<p>无敌小朋友</p>
+					<div>
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start2.png" />
+					</div>
+				</div>
+				<p>这个软件真是逆天了！</p>
+				<span>今天</span>
+			</div>
+			<div class="score com_box">
+				<div><img src="img/detail/userLogo.png" /></div>
+				<div>
+					<p>无敌小朋友</p>
+					<div>
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start2.png" />
+					</div>
+				</div>
+				<p>这个软件真是逆天了！</p>
+				<span>今天</span>
+			</div>
+			<div class="score com_box">
+				<div><img src="img/detail/userLogo.png" /></div>
+				<div>
+					<p>无敌小朋友</p>
+					<div>
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start2.png" />
+					</div>
+				</div>
+				<p>这个软件真是逆天了！</p>
+				<span>今天</span>
+			</div>
+			<div class="score com_box">
+				<div><img src="img/detail/userLogo.png" /></div>
+				<div>
+					<p>无敌小朋友</p>
+					<div>
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start2.png" />
+					</div>
+				</div>
+				<p>这个软件真是逆天了！</p>
+				<span>今天</span>
+			</div>
+			<div class="score com_box">
+				<div><img src="img/detail/userLogo.png" /></div>
+				<div>
+					<p>无敌小朋友</p>
+					<div>
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start2.png" />
+					</div>
+				</div>
+				<p>这个软件真是逆天了！</p>
+				<span>今天</span>
+			</div>
+			<div class="score com_box">
+				<div><img src="img/detail/userLogo.png" /></div>
+				<div>
+					<p>无敌小朋友</p>
+					<div>
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start2.png" />
+					</div>
+				</div>
+				<p>这个软件真是逆天了！</p>
+				<span>今天</span>
+			</div>
+			<div class="score com_box">
+				<div><img src="img/detail/userLogo.png" /></div>
+				<div>
+					<p>无敌小朋友</p>
+					<div>
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start2.png" />
+					</div>
+				</div>
+				<p>这个软件真是逆天了！</p>
+				<span>今天</span>
+			</div>
+			<div class="score com_box">
+				<div><img src="img/detail/userLogo.png" /></div>
+				<div>
+					<p>无敌小朋友</p>
+					<div>
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start2.png" />
+					</div>
+				</div>
+				<p>这个软件真是逆天了！</p>
+				<span>今天</span>
+			</div>
+			<div class="score com_box">
+				<div><img src="img/detail/userLogo.png" /></div>
+				<div>
+					<p>无敌小朋友</p>
+					<div>
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start2.png" />
+					</div>
+				</div>
+				<p>这个软件真是逆天了！</p>
+				<span>今天</span>
+			</div>
+			<div class="score com_box">
+				<div><img src="img/detail/userLogo.png" /></div>
+				<div>
+					<p>无敌小朋友</p>
+					<div>
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start2.png" />
+					</div>
+				</div>
+				<p>这个软件真是逆天了！</p>
+				<span>今天</span>
+			</div>
+			<div class="score com_box">
+				<div><img src="img/detail/userLogo.png" /></div>
+				<div>
+					<p>无敌小朋友</p>
+					<div>
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start2.png" />
+					</div>
+				</div>
+				<p>这个软件真是逆天了！</p>
+				<span>今天</span>
+			</div>
+			<div class="score com_box">
+				<div><img src="img/detail/userLogo.png" /></div>
+				<div>
+					<p>无敌小朋友</p>
+					<div>
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start2.png" />
+					</div>
+				</div>
+				<p>这个软件真是逆天了！</p>
+				<span>今天</span>
+			</div>
+			<div class="score com_box">
+				<div><img src="img/detail/userLogo.png" /></div>
+				<div>
+					<p>无敌小朋友</p>
+					<div>
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start2.png" />
+					</div>
+				</div>
+				<p>这个软件真是逆天了！</p>
+				<span>今天</span>
+			</div>
+			<div class="score com_box">
+				<div><img src="img/detail/userLogo.png" /></div>
+				<div>
+					<p>无敌小朋友</p>
+					<div>
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start2.png" />
+					</div>
+				</div>
+				<p>这个软件真是逆天了！</p>
+				<span>今天</span>
+			</div>
+			<div class="score com_box">
+				<div><img src="img/detail/userLogo.png" /></div>
+				<div>
+					<p>无敌小朋友</p>
+					<div>
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start2.png" />
+					</div>
+				</div>
+				<p>这个软件真是逆天了！</p>
+				<span>今天</span>
+			</div>
+			<div class="score com_box">
+				<div><img src="img/detail/userLogo.png" /></div>
+				<div>
+					<p>无敌小朋友</p>
+					<div>
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start2.png" />
+					</div>
+				</div>
+				<p>这个软件真是逆天了！</p>
+				<span>今天</span>
+			</div>
+			<div class="score com_box">
+				<div><img src="img/detail/userLogo.png" /></div>
+				<div>
+					<p>无敌小朋友</p>
+					<div>
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start2.png" />
+					</div>
+				</div>
+				<p>这个软件真是逆天了！</p>
+				<span>今天</span>
+			</div>
+			<div class="score com_box">
+				<div><img src="img/detail/userLogo.png" /></div>
+				<div>
+					<p>无敌小朋友</p>
+					<div>
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start2.png" />
+					</div>
+				</div>
+				<p>这个软件真是逆天了！</p>
+				<span>今天</span>
+			</div>
+			<div class="score com_box">
+				<div><img src="img/detail/userLogo.png" /></div>
+				<div>
+					<p>无敌小朋友</p>
+					<div>
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start2.png" />
+					</div>
+				</div>
+				<p>这个软件真是逆天了！</p>
+				<span>今天</span>
+			</div>
+			<div class="score com_box">
+				<div><img src="img/detail/userLogo.png" /></div>
+				<div>
+					<p>无敌小朋友</p>
+					<div>
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start2.png" />
+					</div>
+				</div>
+				<p>这个软件真是逆天了！</p>
+				<span>今天</span>
+			</div>
+			<div class="score com_box">
+				<div><img src="img/detail/userLogo.png" /></div>
+				<div>
+					<p>无敌小朋友</p>
+					<div>
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start2.png" />
+					</div>
+				</div>
+				<p>这个软件真是逆天了！</p>
+				<span>今天</span>
+			</div>
+			<div class="score com_box">
+				<div><img src="img/detail/userLogo.png" /></div>
+				<div>
+					<p>无敌小朋友</p>
+					<div>
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start2.png" />
+					</div>
+				</div>
+				<p>这个软件真是逆天了！</p>
+				<span>今天</span>
+			</div>
+			<div class="score com_box">
+				<div><img src="img/detail/userLogo.png" /></div>
+				<div>
+					<p>无敌小朋友</p>
+					<div>
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start2.png" />
+					</div>
+				</div>
+				<p>这个软件真是逆天了！</p>
+				<span>今天</span>
+			</div>
+			<div class="score com_box">
+				<div><img src="img/detail/userLogo.png" /></div>
+				<div>
+					<p>无敌小朋友</p>
+					<div>
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start2.png" />
+					</div>
+				</div>
+				<p>这个软件真是逆天了！</p>
+				<span>今天</span>
+			</div>
+			<div class="score com_box">
+				<div><img src="img/detail/userLogo.png" /></div>
+				<div>
+					<p>无敌小朋友</p>
+					<div>
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start2.png" />
+					</div>
+				</div>
+				<p>这个软件真是逆天了！</p>
+				<span>今天</span>
+			</div>
+			<div class="score com_box">
+				<div><img src="img/detail/userLogo.png" /></div>
+				<div>
+					<p>无敌小朋友</p>
+					<div>
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start2.png" />
+					</div>
+				</div>
+				<p>这个软件真是逆天了！</p>
+				<span>今天</span>
+			</div>
+			<div class="score com_box">
+				<div><img src="img/detail/userLogo.png" /></div>
+				<div>
+					<p>无敌小朋友</p>
+					<div>
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start2.png" />
+					</div>
+				</div>
+				<p>这个软件真是逆天了！</p>
+				<span>今天</span>
+			</div>
+			<div class="score com_box">
+				<div><img src="img/detail/userLogo.png" /></div>
+				<div>
+					<p>无敌小朋友</p>
+					<div>
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start2.png" />
+					</div>
+				</div>
+				<p>这个软件真是逆天了！</p>
+				<span>今天</span>
+			</div>
+			<div class="score com_box">
+				<div><img src="img/detail/userLogo.png" /></div>
+				<div>
+					<p>无敌小朋友</p>
+					<div>
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start2.png" />
+					</div>
+				</div>
+				<p>这个软件真是逆天了！</p>
+				<span>今天</span>
+			</div>
+			<div class="score com_box">
+				<div><img src="img/detail/userLogo.png" /></div>
+				<div>
+					<p>无敌小朋友</p>
+					<div>
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start2.png" />
+					</div>
+				</div>
+				<p>这个软件真是逆天了！</p>
+				<span>今天</span>
+			</div>
+			<div class="score com_box">
+				<div><img src="img/detail/userLogo.png" /></div>
+				<div>
+					<p>无敌小朋友</p>
+					<div>
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start2.png" />
+					</div>
+				</div>
+				<p>这个软件真是逆天了！</p>
+				<span>今天</span>
+			</div>
+			<div class="score com_box">
+				<div><img src="img/detail/userLogo.png" /></div>
+				<div>
+					<p>无敌小朋友</p>
+					<div>
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start2.png" />
+					</div>
+				</div>
+				<p>这个软件真是逆天了！</p>
+				<span>今天</span>
+			</div>
+			<div class="score com_box">
+				<div><img src="img/detail/userLogo.png" /></div>
+				<div>
+					<p>无敌小朋友</p>
+					<div>
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start2.png" />
+					</div>
+				</div>
+				<p>这个软件真是逆天了！</p>
+				<span>今天</span>
+			</div>
+			<div class="score com_box">
+				<div><img src="img/detail/userLogo.png" /></div>
+				<div>
+					<p>无敌小朋友</p>
+					<div>
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start2.png" />
+					</div>
+				</div>
+				<p>这个软件真是逆天了！</p>
+				<span>今天</span>
+			</div>
+			<div class="score com_box">
+				<div><img src="img/detail/userLogo.png" /></div>
+				<div>
+					<p>无敌小朋友</p>
+					<div>
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start2.png" />
+					</div>
+				</div>
+				<p>这个软件真是逆天了！</p>
+				<span>今天</span>
+			</div>
+			<div class="score com_box">
+				<div><img src="img/detail/userLogo.png" /></div>
+				<div>
+					<p>无敌小朋友</p>
+					<div>
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start2.png" />
+					</div>
+				</div>
+				<p>这个软件真是逆天了！</p>
+				<span>今天</span>
+			</div>
+			<div class="score com_box">
+				<div><img src="img/detail/userLogo.png" /></div>
+				<div>
+					<p>无敌小朋友</p>
+					<div>
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start2.png" />
+					</div>
+				</div>
+				<p>这个软件真是逆天了！</p>
+				<span>今天</span>
+			</div>
+			<div class="score com_box">
+				<div><img src="img/detail/userLogo.png" /></div>
+				<div>
+					<p>无敌小朋友</p>
+					<div>
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start2.png" />
+					</div>
+				</div>
+				<p>这个软件真是逆天了！</p>
+				<span>今天</span>
+			</div>
+			<div class="score com_box">
+				<div><img src="img/detail/userLogo.png" /></div>
+				<div>
+					<p>无敌小朋友</p>
+					<div>
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start2.png" />
+					</div>
+				</div>
+				<p>这个软件真是逆天了！</p>
+				<span>今天</span>
+			</div>
+			<div class="score com_box">
+				<div><img src="img/detail/userLogo.png" /></div>
+				<div>
+					<p>无敌小朋友</p>
+					<div>
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start1.png" />
+						<img src="img/detail/s_start2.png" />
+					</div>
+				</div>
+				<p>这是最后一条！</p>
+				<span>今天</span>
+			</div>
+			
+			
+			<!-- 加载更多 -->
+			<div id="more">加载更多</div>
+		</div>
+		<div class="hidePub"></div>
+		<!-- 发表自己的看法 -->
+		<div class="publish">
+			<!--<input type="text" placeholder="说说你的看法吧" />-->
+			<span>点击评论</span>
+			<img src="img/detail/comment.png" />
+		</div>
+		
+		<!-- 隐藏的评论box -->
+		<div class="pubBox">
+			<form>
+				<textarea placeholder="说说你的看法吧！"></textarea>
+				<div class="cc">
+					<div class="clickStart">
+						<img src="img/detail/b_start2.png" />
+						<img src="img/detail/b_start2.png" />
+						<img src="img/detail/b_start2.png" />
+						<img src="img/detail/b_start2.png" />
+						<img src="img/detail/b_start2.png" />
+					</div>
+					<p>(请给小程序评分吧)</p>
+					<a id="btn">提交</a>
+				</div>
+			</form>
+		</div>
+		<!-- 底部PC -->
+	    <div class="footer_pc">
+	    	<span>
+	    	<img src="img/PC/index/bottomLogo.png" />
+	    	<div>
+	    		<a href="index.html">精选</a>
+	    		<span></span>
+	    		<a href="class.html">类别</a>
+	    		<span></span>
+	    		<a href="theme.html">专题</a>
+	    		<span></span>
+	    		<a href="appraise.html">测评</a>
+	    	</div>
+	    	<p>Copyright © 2016 www.diandianchengxu.com. All Rights Reserved.</p>
+	    	<div>
+	    		<div><img src="img/PC/index/blogo.png" /></div>
+	    		<p>扫一扫关注点点程序</p>
+	    	</div>
+	    	</span>
+	    </div>
+		<script type="text/javascript" src="js/detail.js" ></script>
+		<script type="text/javascript" src="js/main.js" ></script>
+	</body>
+</html>

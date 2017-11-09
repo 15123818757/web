@@ -1,0 +1,129 @@
+@charset "utf-8";
+/* CSS Document */
+body {overflow:hidden;}
+body,html,form {height:100%;}
+span {font-family:arial;}
+.game-article {width:100%; margin:0px auto; padding:10% 0px; padding-top:5%;}
+.game-article figure {width:100px; margin:0px auto;}
+.game-article section {width:180px;  background-color:#ffd400; transform:skew(0deg,-5deg); -webkit-transform:skew(0deg,-5deg); -moz-transform:skew(0deg,-5deg); -ms-transform:skew(0deg,-5deg); -o-transform:skew(0deg,-5deg); margin:0px auto; position:relative; padding:15px; padding-top:5px; border:5px solid #f7f7f7; overflow:visible; padding-bottom:5%; margin-top:80px;}
+.game-article section p { transform:skew(0deg,5deg); -webkit-transform:skew(0deg,5deg); -moz-transform:skew(0deg,0deg); -ms-transform:skew(0deg,0deg); -o-transform:skew(0deg,0deg); font-size:16px; line-height:24px;}
+.game-section {position:absolute; width:100%;  background-color:#ffd400; height:20px; left:-5px; top:-15px; border:5px solid #f7f7f7; border-bottom:none; }
+.game-run {height:31%; width:100%; position:absolute; bottom:0px; background:#ffd400; overflow:visible;}
+.game-run .game-run-prodent {width:45%; position:fixed; bottom:10%; right:10px;}
+.game-run .game-run-pai {width:80px; position:fixed; bottom:4%; /*left:-80px;*/ display:none; z-index:1;}
+.game-cross {width:100%; height:100%; background-color:#fff; position:fixed; left:0px; top:0px; z-index:3; display: -webkit-box; display: -webkit-flex; display: -moz-box; display: -moz-flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -moz-box-align: center; -ms-flex-pack:center; -webkit-justify-content: center;
+-moz-justify-content: center; justify-content: center; -webkit-box-pack: center; -moz-box-pack: center; -ms-flex-align:center; -webkit-align-items: center; -moz-align-items: center; align-items: center;}
+.game-cross section {width:90%; margin:0px auto; text-align:center;}
+.game-cross section figure {width:120px; margin:0px auto;}
+.game-cross section p {font-size:16px; color:#454545;}
+.game-run .game-run-click {width:80px; height:130px; position:fixed; bottom:4%; z-index:2;display:none;}
+.game-run .game-run-click img {width:25px; text-align:center; margin-left:27.5px; margin-top:10px; position:relative; top:0px; animation:myAn 0.3s infinite; -webkit-animation:myAn 0.4s infinite; -moz-animation:myAn 0.2s infinite; -o-animation:myAn 0.2s infinite; -ms-animation:myAn 0.2s infinite; }
+@keyframes myAn {
+	from {top:-5px;}
+	to {top:5px;}
+	}
+@-webkit-keyframes myAn {
+	from {top:-5px;}
+	to {top:5px;}
+	}
+@-moz-keyframes myAn {
+	from {top:-5px;}
+	to {top:5px;}
+	}
+@-ms-keyframes myAn {
+	from {top:-5px;}
+	to {top:5px;}
+	}
+@-o-keyframes myAn {
+	from {top:-5px;}
+	to {top:5px;}
+	}
+	
+/*game-Figure*/
+.game-Figure {position:fixed; height:100%; background-color:rgba(30,25,2,0.95); top:0px; left:0px; z-index:1; display: -webkit-box; display: -webkit-flex; display: -moz-box; display: -moz-flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -moz-box-align: center; -ms-flex-pack:center; -webkit-justify-content: center;
+-moz-justify-content: center; justify-content: center; -webkit-box-pack: center; -moz-box-pack: center; -ms-flex-align:center; -webkit-align-items: center; -moz-align-items: center; align-items: center;}
+.game-Figure article {width:80%; margin:0px auto; text-align:center;}
+.game-Figure article aside {font-size:24px; color:#fff; font-weight:bold;}
+.game-Figure article .game-figureImg {display:box; display:-webkit-box; display:-moz-box; display:-o-box; display:flex; display:-ms-boxflex; margin-top:10px;}
+.game-Figure article .game-figureImg figure {box-flex:1; -webkit-box-flex:1; -moz-box-flex:1; -ms-boxflex:1; flex:1; -o-box-flex:1; padding:10px;  text-align:center;}
+.game-Figure article .game-figureImg figure figcaption {width:80px; height:80px; border-radius:50%; overflow:hidden; background-color:#fff;  border:3px solid rgb(0,0,0); margin:0px auto;}
+.game-Figure article .game-figureImg figure img {border-radius:50%; }
+.game-Figure article .game-figureImg figure.on figcaption {border:3px solid #f49c00; border-radius:50%;}
+.game-Figure article .game-input p:first-child {width:100%; height:35px; background:#fff; border-radius:2px; margin-top:5px;}
+.game-Figure article .game-input input {width:100%;  font-size:16px; color:#454545; margin-top:8px; border:none;}
+.game-Figure article .game-input p label select {width:100%;  font-size:16px; color:#454545; margin-top:8px; border:none;}
+.game-Figure article .game-input p:last-child {font-size:12px; color:#fff; line-height:18px; text-align:left; margin-top:10px;}
+.game-button {margin-top:20px;}
+.game-button a {font-size:18px; color:#fff; font-weight:bold; text-shadow:0px 2px 3px #ffa300; margin-bottom:10px; background-color:#ffa300;  box-shadow:0px 5px 0px #cd5902;  padding:10px 0px; display:block;  border-radius:20px;}
+.registeredText {width:100%; position:absolute; top:0px; left:0px; background:#ffa300; text-align:center; font-size:14px; line-height:30px; padding:5px 0px; color:#fff; z-index:2; display:none;}
+
+/*gameEnd.html*/
+.gameEnd {height:100%; background:#ffd400 url(../images/img/GameEndBack.jpg) top center no-repeat; background-size:100% auto;display: -webkit-box; display: -webkit-flex; display: -moz-box; display: -moz-flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -moz-box-align: center; -ms-flex-pack:center; -webkit-justify-content: center;
+-moz-justify-content: center; justify-content: center; -webkit-box-pack: center; -moz-box-pack: center; -ms-flex-align:center; -webkit-align-items: center; -moz-align-items: center; align-items: center;}
+.gameEnd article {width:90%; margin:0px auto; text-align:center;}
+.gameEnd article .gameEnd-logo {width:100px; margin:0px auto;}
+.gameEnd article section.gameEnd-Cj p:first-child img {/*-webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(60,118,170,1)), to(rgba(20,60,108,1)));*/ width:170px; }
+.gameEnd article section.gameEnd-Cj p:last-child {width:120px; text-align:left; display:inline-block;}
+.gameEnd article section.gameEnd-Cj p:last-child em {width:100%; font-style:normal; font-size:16px; color:#454545; line-height:24px;} 
+.gameEnd article .gameEnd-text {font-size:14px; line-height:24px; color:#454545;}
+
+.gameEnd-button {width:80%; margin:0px auto;}
+.gameEnd-button .game-button {margin-top:10px;}
+.gameEnd-button .game-button:first-child a  {font-size:18px; color:#fff; font-weight:bold; text-shadow:0px 2px 3px #103f6e; margin-bottom:10px; background-color:#336699;  box-shadow:0px 5px 0px #103f6e;  padding:10px 0px; display:block;  border-radius:20px;}
+.game-fx {padding-bottom:40px;}
+.game-fx a {font-size:16px; color:#454545;}
+.game-fx a img {width:40px; position:relative; top:15px; margin:0px 5px;}
+.gameEnd-fx {height:100%; background-color:rgba(30,25,2,0.95); position:fixed; top:0px; left:0px; display:none;}
+.gameEnd-fx.gameEnd-fxvisible {display:block;}
+.gameEnd-fx figure {width:300px; float:right;}
+
+/*preach.html*/
+.preach {height:100%; background:url(../images/img/xuanBack.jpg) top left no-repeat; background-size:100% 100%;}
+.preach .preach-mian {width:85%; margin:0px auto; background-color:#ffd400;}
+.preach-logo {width:100px; margin:0px auto;}
+.preach-logo img {margin-top:15px;}
+.preach .preach-mian .preach-article aside {font-size:24px; color:#454545; text-align:center; margin-top:10px;}
+.preach .preach-mian .preach-article .preach-section {width:90%; margin:0px auto;}
+.preach .preach-mian .preach-article .preach-section .preach-div {padding:10px 0px; border-bottom:1px solid #e3bd04;}
+.preach .preach-mian .preach-article .preach-section .preach-div .preach-divText {display:box; display:-webkit-box; display:-moz-box; display:-o-box; display:flex; display:-ms-boxflex;}
+.preach .preach-mian .preach-article .preach-section .preach-div .preach-divText p {font-size:16px; line-height:20px; color:#454545;}
+.preach .preach-mian .preach-article .preach-section .preach-div .preach-divText p:first-child {width:50px;}
+.preach .preach-mian .preach-article .preach-section .preach-div .preach-divText p:last-child {box-flex:1; -webkit-box-flex:1; -moz-box-flex:1; -ms-boxflex:1; flex:1; -o-box-flex:1;}
+.preach-button {width:80%; margin:0px auto; text-align:center;}
+
+/*rankingList.html*/
+.gameEndMian {background:#ffd400 url(../images/img/GameEndBack.jpg) top center no-repeat; background-size:100% auto;}
+.gameEndMian .rankingList {padding-top:10px;}
+.gameEndMian .rankingList .rankingText {min-width:120px; text-align:center; margin:0px auto;  margin-top:15px; }
+.gameEndMian .rankingList .rankingText p {display:inline-block; text-align:left;}
+.gameEndMian .rankingList .rankingText .rankTe em {line-height:24px; font-style:normal;}
+.gameEndMian .rankingList ul {width:90%; margin:0px auto; margin-top:20px;}
+.gameEndMian .rankingList ul li {width:100%; line-height:45px;  text-indent:10px; background:#fff url(../images/img/arrow.png) right center no-repeat; background-size:30px auto; border-radius:2px; margin-bottom:15px;}
+.gameEndMian .rankingList ul li a {font-size:16px; color:#454545; display:block;}
+.rankingButton {width:100%; position:fixed; left:0px; bottom:0px; padding-bottom:10px; background-color:#ffd400;}
+.gameEndMian .rankingList .ranking-ul {margin-bottom:80px;}
+
+.rank-mian {width:90%; margin:0px auto;}
+.rank-mian section {display:box; display:-webkit-box; display:-moz-box; display:-o-box; display:flex; display:-ms-boxflex; background-color:#fff; line-height:30px; border-radius:2px; margin-bottom:10px;}
+.rank-mian section:first-child {}
+.rank-mian section p:first-child {width:50px; padding-right:10px; text-align:center; background:#9d9c9c url(../images/img/arrowLefthei.jpg) right center no-repeat; font-size:18px; color:#fff;}
+.rank-mian section p:nth-child(2) {box-flex:1; -webkit-box-flex:1; -moz-box-flex:1; -ms-boxflex:1; flex:1; -o-box-flex:1;}
+.rank-mian section p:nth-child(3) {width:60px; text-align:center;}
+.rank-mian section:first-child {background-color:transparent; font-size:16px; color:#000; text-align:center; font-weight:bold;}
+.rank-mian section:first-child p:first-child {background:none; font-size:16px; color:#000;}
+.rank-mian section:nth-child(2) p:first-child {background:#336699 url(../images/img/arrowLeft.jpg) right center no-repeat; }
+.rank-mian section:nth-child(3) p:first-child {background:#336699 url(../images/img/arrowLeft.jpg) right center no-repeat; }
+.rank-mian section:nth-child(4) p:first-child {background:#336699 url(../images/img/arrowLeft.jpg) right center no-repeat; }
+.gameEndMian .rankingList .rank-mian {margin-bottom:80px;}
+
+/**/
+.game-end {position:fixed; height:100%; background-color:rgba(30,25,2,0.95); top:0px; left:0px; z-index:5; display: -webkit-box; display: -webkit-flex; display: -moz-box; display: -moz-flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -moz-box-align: center; -ms-flex-pack:center; -webkit-justify-content: center;
+-moz-justify-content: center; justify-content: center; -webkit-box-pack: center; -moz-box-pack: center; -ms-flex-align:center; -webkit-align-items: center; -moz-align-items: center; align-items: center;}
+.game-end article {width:70%; background-color:#fff; padding:15px; border-radius:2px; line-height:24px; text-align:center; font-size:16px;}
+.game-end article .game-endButton {width:120px; height:35px; line-height:35px; border-radius:2px; background-color:#ffd300; display:inline-block; margin-top:20px;}
+.game-end article .game-endButton a {display:block; color:#000; font-size:16px;}
+
+.datapla {background:#fff; border:1px solid #fff; height:20px; -webkit-appearance: none;}
+
+/*2015-8-27*/
+.game-yun {width:230px; background:url(../images/img/yun.png) center center no-repeat; background-size:100% auto; text-align:center; padding:15px 0px; padding-top:25px; font-size:14px; position:absolute; left:0px; }

@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	    <title>点点程序</title>
+	    <link rel="stylesheet" href="css/main.css" />
+	    <link rel="stylesheet" href="css/public.css" />
+	    <link rel="stylesheet" href="css/category.css" />
+	    <script type="text/javascript" src="js/jquery-1.7.2.min.js" ></script>
+	    <style>
+	    	.topNav>a{
+	    		height: 40px;
+	    		width: 50%;
+	    		padding: 0 !important;
+	    		text-align: center;
+	    	}
+	    	.topNav>div{
+	    		position: absolute;
+	    		bottom: 0;
+	    		left: 0;
+	    		width: 50%;
+	    		transition: 0.5s;
+	    		text-align: center;
+	    	}
+	    	.topNav>div>span{
+	    		position: static;
+	    		display: block;
+	    		margin: auto;
+	    		width: 85%;
+	    	}
+	    	@media only screen and (min-width: 640px) and (max-width: 10000px) {
+	    		.topNav{display: none;}
+	    		.contentBox{display: none;}
+	    		.hideBox{display: none;}
+	    		.guide_pc{padding:0 !important;}
+	    		body{min-width: 1400px;}
+	    		.more_article{display: none;}
+	    		.header{min-width: 1400px;}
+	    	}
+	    </style>
+	</head>
+	<body>
+		<!-- 头部 -->
+		<header class="header">
+			<span>
+			<a href="index.html"><img src="img/logo.png" /></a>
+			<a><img id="search" src="img/search.png" /></a>
+			<div>
+				<a href="index.html">精选</a>
+				<a class="activeFont" href="class.html">类别</a>
+				<a href="theme.html">专题</a>
+				<a href="appraise.html">测评</a>
+			</div>
+			<div>
+				<div>
+					<input type="text" placeholder="搜索你喜欢的" />
+					<a href="result.html"><img src="img/search.png" /></a>
+				</div>
+				<span class="login">登录</span>
+				<span class="userLogoTop"><img src="img/my/userLogo.png" /></span>
+			</div>
+			</span>
+		</header>
+		<div class="pc_headerBox" style="height: 70px;"></div>
+		<!-- PC 回到顶部 -->
+		<div class="goTop">
+			<div><img src="img/PC/index/rightIcon1.png" /><a><span>免费</span><span>发布</span></a></div>
+			<div><img src="img/PC/index/rightTip.png" /><a><span>关注</span><span>点点</span></a><img class="rightLogo" src="img/PC/index/blogo.png" /></div>
+			<div id="goTop_pc"><img src="img/PC/index/goTop.png" /><a><span>回到</span><span>顶部</span></a></div>
+		</div>
+		
+		<!-- 搜索的div -->
+		<div class="searchBox">
+			<div>
+				<input type="text" placeholder="请输入小程序关键词" />
+				<a href="result.html"><img src="img/search.png" /></a>
+			</div>
+			<div>
+				<p>热门搜索</p>
+				<p><a>腾讯</a></p>
+				<p><a>单车</a></p>
+				<p><a>小程序</a></p>
+				<p><a>宝宝</a></p>
+				<p><a>小说</a></p>
+				<p><a>汽车</a></p>
+			</div>
+		</div>
+		
+		
+		
+		<!-- 导航 -->
+		<div class="topNav">
+			<a class="activeFont">热度</a>
+			<a>最新</a>	
+			<div><span></span></div>
+		</div>
+		
+		<div class="hideBox" style="height: 40px;"></div>
+		
+		
+		<!-- 分类盒子 -->
+		<div class="contentBox">
+			<div>
+				<div class="evaluation"><a href="detail_program.html"><img src="img/sLogo3.png" /></a><div><p><a href="detail_program.html">极简笔记</a></p><p>社会服务  工具  方便快捷</p><p><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><span>5.0</span></p></div><a>点点</a></div>
+				<div class="evaluation"><a href="detail_program.html"><img src="img/sLogo3.png" /></a><div><p><a href="detail_program.html">极简笔记</a></p><p>社会服务  工具  方便快捷</p><p><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><span>5.0</span></p></div><a>点点</a></div>
+				<div class="evaluation"><a href="detail_program.html"><img src="img/sLogo3.png" /></a><div><p><a href="detail_program.html">极简笔记</a></p><p>社会服务  工具  方便快捷</p><p><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><span>5.0</span></p></div><a>点点</a></div>
+				<div class="evaluation"><a href="detail_program.html"><img src="img/sLogo3.png" /></a><div><p><a href="detail_program.html">极简笔记</a></p><p>社会服务  工具  方便快捷</p><p><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><span>5.0</span></p></div><a>点点</a></div>
+				<div class="evaluation"><a href="detail_program.html"><img src="img/sLogo3.png" /></a><div><p><a href="detail_program.html">极简笔记</a></p><p>社会服务  工具  方便快捷</p><p><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><span>5.0</span></p></div><a>点点</a></div>
+				<div class="evaluation"><a href="detail_program.html"><img src="img/sLogo3.png" /></a><div><p><a href="detail_program.html">极简笔记</a></p><p>社会服务  工具  方便快捷</p><p><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><span>5.0</span></p></div><a>点点</a></div>
+				<div class="evaluation"><a href="detail_program.html"><img src="img/sLogo3.png" /></a><div><p><a href="detail_program.html">极简笔记</a></p><p>社会服务  工具  方便快捷</p><p><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><span>5.0</span></p></div><a>点点</a></div>
+				<div class="evaluation"><a href="detail_program.html"><img src="img/sLogo3.png" /></a><div><p><a href="detail_program.html">极简笔记</a></p><p>社会服务  工具  方便快捷</p><p><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><span>5.0</span></p></div><a>点点</a></div>
+				<div class="evaluation"><a href="detail_program.html"><img src="img/sLogo3.png" /></a><div><p><a href="detail_program.html">极简笔记</a></p><p>社会服务  工具  方便快捷</p><p><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><span>5.0</span></p></div><a>点点</a></div>
+				<div class="evaluation"><a href="detail_program.html"><img src="img/sLogo3.png" /></a><div><p><a href="detail_program.html">极简笔记</a></p><p>社会服务  工具  方便快捷</p><p><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><span>5.0</span></p></div><a>点点</a></div>
+				<div class="evaluation"><a href="detail_program.html"><img src="img/sLogo3.png" /></a><div><p><a href="detail_program.html">极简笔记</a></p><p>社会服务  工具  方便快捷</p><p><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><span>5.0</span></p></div><a>点点</a></div>
+				<div class="evaluation"><a href="detail_program.html"><img src="img/sLogo3.png" /></a><div><p><a href="detail_program.html">极简笔记</a></p><p>社会服务  工具  方便快捷</p><p><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><span>5.0</span></p></div><a>点点</a></div>
+				<div class="evaluation"><a href="detail_program.html"><img src="img/sLogo3.png" /></a><div><p><a href="detail_program.html">极简笔记</a></p><p>社会服务  工具  方便快捷</p><p><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><span>5.0</span></p></div><a>点点</a></div>
+				<div class="evaluation"><a href="detail_program.html"><img src="img/sLogo3.png" /></a><div><p><a href="detail_program.html">极简笔记</a></p><p>社会服务  工具  方便快捷</p><p><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><span>5.0</span></p></div><a>点点</a></div>
+				<div class="evaluation"><a href="detail_program.html"><img src="img/sLogo3.png" /></a><div><p><a href="detail_program.html">极简笔记</a></p><p>社会服务  工具  方便快捷</p><p><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><span>5.0</span></p></div><a>点点</a></div>
+				<div class="evaluation"><a href="detail_program.html"><img src="img/sLogo3.png" /></a><div><p><a href="detail_program.html">极简笔记</a></p><p>社会服务  工具  方便快捷</p><p><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><span>5.0</span></p></div><a>点点</a></div>
+				<div class="evaluation"><a href="detail_program.html"><img src="img/sLogo3.png" /></a><div><p><a href="detail_program.html">极简笔记</a></p><p>社会服务  工具  方便快捷</p><p><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><span>5.0</span></p></div><a>点点</a></div>
+				<div class="evaluation"><a href="detail_program.html"><img src="img/sLogo3.png" /></a><div><p><a href="detail_program.html">极简笔记</a></p><p>社会服务  工具  方便快捷</p><p><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><span>5.0</span></p></div><a>点点</a></div>
+				<div class="evaluation"><a href="detail_program.html"><img src="img/sLogo3.png" /></a><div><p><a href="detail_program.html">极简笔记</a></p><p>社会服务  工具  方便快捷</p><p><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><span>5.0</span></p></div><a>点点</a></div>
+				<div class="evaluation"><a href="detail_program.html"><img src="img/sLogo3.png" /></a><div><p><a href="detail_program.html">极简笔记</a></p><p>社会服务  工具  方便快捷</p><p><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><span>5.0</span></p></div><a>点点</a></div>
+				<div class="evaluation"><a href="detail_program.html"><img src="img/sLogo3.png" /></a><div><p><a href="detail_program.html">极简笔记</a></p><p>社会服务  工具  方便快捷</p><p><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><span>5.0</span></p></div><a>点点</a></div>
+				<div class="evaluation"><a href="detail_program.html"><img src="img/sLogo3.png" /></a><div><p><a href="detail_program.html">极简笔记</a></p><p>社会服务  工具  方便快捷</p><p><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><span>5.0</span></p></div><a>点点</a></div>
+			</div>
+			<div>
+				<div class="evaluation"><a href="detail_program.html"><img src="img/sLogo1.png" /></a><div><p><a href="detail_program.html">王者荣耀</a></p><p>游戏  电子竞技</p><p><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><span>5.0</span></p></div><a>点点</a></div>
+				<div class="evaluation"><a href="detail_program.html"><img src="img/sLogo1.png" /></a><div><p><a href="detail_program.html">王者荣耀</a></p><p>游戏  电子竞技</p><p><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><span>5.0</span></p></div><a>点点</a></div>
+				<div class="evaluation"><a href="detail_program.html"><img src="img/sLogo1.png" /></a><div><p><a href="detail_program.html">王者荣耀</a></p><p>游戏  电子竞技</p><p><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><span>5.0</span></p></div><a>点点</a></div>
+				<div class="evaluation"><a href="detail_program.html"><img src="img/sLogo1.png" /></a><div><p><a href="detail_program.html">王者荣耀</a></p><p>游戏  电子竞技</p><p><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><span>5.0</span></p></div><a>点点</a></div>
+				<div class="evaluation"><a href="detail_program.html"><img src="img/sLogo1.png" /></a><div><p><a href="detail_program.html">王者荣耀</a></p><p>游戏  电子竞技</p><p><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><span>5.0</span></p></div><a>点点</a></div>
+				<div class="evaluation"><a href="detail_program.html"><img src="img/sLogo1.png" /></a><div><p><a href="detail_program.html">王者荣耀</a></p><p>游戏  电子竞技</p><p><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><span>5.0</span></p></div><a>点点</a></div>
+				<div class="evaluation"><a href="detail_program.html"><img src="img/sLogo1.png" /></a><div><p><a href="detail_program.html">王者荣耀</a></p><p>游戏  电子竞技</p><p><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><span>5.0</span></p></div><a>点点</a></div>
+				<div class="evaluation"><a href="detail_program.html"><img src="img/sLogo1.png" /></a><div><p><a href="detail_program.html">王者荣耀</a></p><p>游戏  电子竞技</p><p><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><span>5.0</span></p></div><a>点点</a></div>
+				<div class="evaluation"><a href="detail_program.html"><img src="img/sLogo1.png" /></a><div><p><a href="detail_program.html">王者荣耀</a></p><p>游戏  电子竞技</p><p><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><span>5.0</span></p></div><a>点点</a></div>
+				<div class="evaluation"><a href="detail_program.html"><img src="img/sLogo1.png" /></a><div><p><a href="detail_program.html">王者荣耀</a></p><p>游戏  电子竞技</p><p><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><span>5.0</span></p></div><a>点点</a></div>
+				<div class="evaluation"><a href="detail_program.html"><img src="img/sLogo1.png" /></a><div><p><a href="detail_program.html">王者荣耀</a></p><p>游戏  电子竞技</p><p><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><span>5.0</span></p></div><a>点点</a></div>
+				<div class="evaluation"><a href="detail_program.html"><img src="img/sLogo1.png" /></a><div><p><a href="detail_program.html">王者荣耀</a></p><p>游戏  电子竞技</p><p><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><span>5.0</span></p></div><a>点点</a></div>
+				<div class="evaluation"><a href="detail_program.html"><img src="img/sLogo1.png" /></a><div><p><a href="detail_program.html">王者荣耀</a></p><p>游戏  电子竞技</p><p><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><span>5.0</span></p></div><a>点点</a></div>
+				<div class="evaluation"><a href="detail_program.html"><img src="img/sLogo1.png" /></a><div><p><a href="detail_program.html">王者荣耀</a></p><p>游戏  电子竞技</p><p><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><span>5.0</span></p></div><a>点点</a></div>
+				<div class="evaluation"><a href="detail_program.html"><img src="img/sLogo1.png" /></a><div><p><a href="detail_program.html">王者荣耀</a></p><p>游戏  电子竞技</p><p><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><span>5.0</span></p></div><a>点点</a></div>
+				<div class="evaluation"><a href="detail_program.html"><img src="img/sLogo1.png" /></a><div><p><a href="detail_program.html">王者荣耀</a></p><p>游戏  电子竞技</p><p><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><span>5.0</span></p></div><a>点点</a></div>
+				<div class="evaluation"><a href="detail_program.html"><img src="img/sLogo1.png" /></a><div><p><a href="detail_program.html">王者荣耀</a></p><p>游戏  电子竞技</p><p><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><span>5.0</span></p></div><a>点点</a></div>
+				<div class="evaluation"><a href="detail_program.html"><img src="img/sLogo1.png" /></a><div><p><a href="detail_program.html">王者荣耀</a></p><p>游戏  电子竞技</p><p><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><span>5.0</span></p></div><a>点点</a></div>
+				<div class="evaluation"><a href="detail_program.html"><img src="img/sLogo1.png" /></a><div><p><a href="detail_program.html">王者荣耀</a></p><p>游戏  电子竞技</p><p><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><span>5.0</span></p></div><a>点点</a></div>
+				<div class="evaluation"><a href="detail_program.html"><img src="img/sLogo1.png" /></a><div><p><a href="detail_program.html">王者荣耀</a></p><p>游戏  电子竞技</p><p><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><span>5.0</span></p></div><a>点点</a></div>
+				<div class="evaluation"><a href="detail_program.html"><img src="img/sLogo1.png" /></a><div><p><a href="detail_program.html">王者荣耀</a></p><p>游戏  电子竞技</p><p><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><span>5.0</span></p></div><a>点点</a></div>
+				<div class="evaluation"><a href="detail_program.html"><img src="img/sLogo1.png" /></a><div><p><a href="detail_program.html">王者荣耀</a></p><p>游戏  电子竞技</p><p><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><span>5.0</span></p></div><a>点点</a></div>
+				<div class="evaluation"><a href="detail_program.html"><img src="img/sLogo1.png" /></a><div><p><a href="detail_program.html">王者荣耀</a></p><p>游戏  电子竞技</p><p><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><span>5.0</span></p></div><a>点点</a></div>
+				<div class="evaluation"><a href="detail_program.html"><img src="img/sLogo1.png" /></a><div><p><a href="detail_program.html">王者荣耀</a></p><p>游戏  电子竞技</p><p><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><span>5.0</span></p></div><a>点点</a></div>
+				<div class="evaluation"><a href="detail_program.html"><img src="img/sLogo1.png" /></a><div><p><a href="detail_program.html">王者荣耀</a></p><p>游戏  电子竞技</p><p><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><span>5.0</span></p></div><a>点点</a></div>
+				<div class="evaluation"><a href="detail_program.html"><img src="img/sLogo1.png" /></a><div><p><a href="detail_program.html">王者荣耀</a></p><p>游戏  电子竞技</p><p><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><span>5.0</span></p></div><a>点点</a></div>
+				<div class="evaluation"><a href="detail_program.html"><img src="img/sLogo1.png" /></a><div><p><a href="detail_program.html">王者荣耀</a></p><p>游戏  电子竞技</p><p><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><span>5.0</span></p></div><a>点点</a></div>
+				<div class="evaluation"><a href="detail_program.html"><img src="img/sLogo1.png" /></a><div><p><a href="detail_program.html">王者荣耀</a></p><p>游戏  电子竞技</p><p><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><span>5.0</span></p></div><a>点点</a></div>
+				<div class="evaluation"><a href="detail_program.html"><img src="img/sLogo1.png" /></a><div><p><a href="detail_program.html">王者荣耀</a></p><p>游戏  电子竞技</p><p><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><img src="img/detail/s_start1.png" /><span>5.0</span></p></div><a>点点</a></div>
+			</div>
+		</div>
+		
+		<!-- 点击按钮出现的框 -->
+		<div id="moBox">
+			<div>
+				<img src="img/sLogo4.png" />
+				<p>极简笔记</p>
+				<span></span>
+				<p>（请手动复制小程序名称）</p>
+				<img src="img/bottomImg1.jpg" />
+				<a>前往微信</a>
+			</div>
+		</div>
+		
+		<!-- 点击按钮出现的框  微信 -->
+		<div id="moBoxWx">
+			<div>
+				<img src="img/bottomImg2.jpg" />
+				<p>长按识别二维码</p>
+ 				<p>打开小程序</p>
+			</div>
+		</div>
+		
+		
+		
+		<div class="pc_content">
+				<!-- 导航 -->
+				<div class="classTitle_pc">
+					<a class="activeFont">全部</a>
+					<a>社交</a>
+					<a>生活</a>
+					<a>工具</a>
+					<a>阅读</a>
+					<a>影音</a>
+					<a>图像</a>
+					<a>办公</a>
+					<a>购物</a>
+					<a>金融</a>
+					<a>出行</a>
+					<a>旅游</a>
+					<a>体育</a>
+					<a>餐饮</a>
+					<a>教育</a>
+					<a>健康</a>
+					<a>母婴</a>
+					<a>房产</a>
+					<a>政务</a>
+				</div>
+				<!-- 选项 -->
+				<div class="xxPc">
+					<a class="activeXXPcA">热度</a>
+					<a>最新</a>
+				</div>
+				<!-- 主要的内容 -->
+				<div class="guide_pc">
+					<div>
+						<a>
+			    			<img src="img/sLogo1.png" />
+			    			<div>
+			    				<p>极简笔记</p>
+			    				<div>
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<span>5.0</span>
+			    				</div>
+			    				<p>极简笔记是一款非常简单实用的工具类小程序，它能让您非常快捷的记录您的日常生活</p>
+			    			</div>
+			    			<label>
+			    				<div>
+			    					<span>工具</span>
+			    					<span>方便快捷</span>
+			    				</div>
+			    				<span>点点<img class="erWeiMa" src="img/PC/index/er.png" /></span>
+			    			</label>
+			    		</a>
+			    		<a>
+			    			<img src="img/sLogo2.png" />
+			    			<div>
+			    				<p>极简笔记</p>
+			    				<div>
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<span>5.0</span>
+			    				</div>
+			    				<p>极简笔记是一款非常简单实用的工具类小程序，它能让您非常快捷的记录您的日常生活</p>
+			    			</div>
+			    			<label>
+			    				<div>
+			    					<span>工具</span>
+			    					<span>方便快捷</span>
+			    				</div>
+			    				<span>点点<img class="erWeiMa" src="img/PC/index/er.png" /></span>
+			    			</label>
+			    		</a>
+			    		<a>
+			    			<img src="img/sLogo3.png" />
+			    			<div>
+			    				<p>极简笔记</p>
+			    				<div>
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<span>5.0</span>
+			    				</div>
+			    				<p>极简笔记是一款非常简单实用的工具类小程序，它能让您非常快捷的记录您的日常生活</p>
+			    			</div>
+			    			<label>
+			    				<div>
+			    					<span>工具</span>
+			    					<span>方便快捷</span>
+			    				</div>
+			    				<span>点点<img class="erWeiMa" src="img/PC/index/er.png" /></span>
+			    			</label>
+			    		</a>
+			    		<a>
+			    			<img src="img/sLogo4.png" />
+			    			<div>
+			    				<p>极简笔记</p>
+			    				<div>
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<span>5.0</span>
+			    				</div>
+			    				<p>极简笔记是一款非常简单实用的工具类小程序，它能让您非常快捷的记录您的日常生活</p>
+			    			</div>
+			    			<label>
+			    				<div>
+			    					<span>工具</span>
+			    					<span>方便快捷</span>
+			    				</div>
+			    				<span>点点<img class="erWeiMa" src="img/PC/index/er.png" /></span>
+			    			</label>
+			    		</a>
+			    		<a>
+			    			<img src="img/sLogo5.png" />
+			    			<div>
+			    				<p>极简笔记</p>
+			    				<div>
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<span>5.0</span>
+			    				</div>
+			    				<p>极简笔记是一款非常简单实用的工具类小程序，它能让您非常快捷的记录您的日常生活</p>
+			    			</div>
+			    			<label>
+			    				<div>
+			    					<span>工具</span>
+			    					<span>方便快捷</span>
+			    				</div>
+			    				<span>点点<img class="erWeiMa" src="img/PC/index/er.png" /></span>
+			    			</label>
+			    		</a>
+			    		<a>
+			    			<img src="img/sLogo2.png" />
+			    			<div>
+			    				<p>极简笔记</p>
+			    				<div>
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<span>5.0</span>
+			    				</div>
+			    				<p>极简笔记是一款非常简单实用的工具类小程序，它能让您非常快捷的记录您的日常生活</p>
+			    			</div>
+			    			<label>
+			    				<div>
+			    					<span>工具</span>
+			    					<span>方便快捷</span>
+			    				</div>
+			    				<span>点点<img class="erWeiMa" src="img/PC/index/er.png" /></span>
+			    			</label>
+			    		</a>
+			    		<a>
+			    			<img src="img/sLogo1.png" />
+			    			<div>
+			    				<p>极简笔记</p>
+			    				<div>
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<span>5.0</span>
+			    				</div>
+			    				<p>极简笔记是一款非常简单实用的工具类小程序，它能让您非常快捷的记录您的日常生活</p>
+			    			</div>
+			    			<label>
+			    				<div>
+			    					<span>工具</span>
+			    					<span>方便快捷</span>
+			    				</div>
+			    				<span>点点<img class="erWeiMa" src="img/PC/index/er.png" /></span>
+			    			</label>
+			    		</a>
+			    		<a>
+			    			<img src="img/sLogo3.png" />
+			    			<div>
+			    				<p>极简笔记</p>
+			    				<div>
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<span>5.0</span>
+			    				</div>
+			    				<p>极简笔记是一款非常简单实用的工具类小程序，它能让您非常快捷的记录您的日常生活</p>
+			    			</div>
+			    			<label>
+			    				<div>
+			    					<span>工具</span>
+			    					<span>方便快捷</span>
+			    				</div>
+			    				<span>点点<img class="erWeiMa" src="img/PC/index/er.png" /></span>
+			    			</label>
+			    		</a>
+			    		<a>
+			    			<img src="img/sLogo2.png" />
+			    			<div>
+			    				<p>极简笔记</p>
+			    				<div>
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<span>5.0</span>
+			    				</div>
+			    				<p>极简笔记是一款非常简单实用的工具类小程序，它能让您非常快捷的记录您的日常生活</p>
+			    			</div>
+			    			<label>
+			    				<div>
+			    					<span>工具</span>
+			    					<span>方便快捷</span>
+			    				</div>
+			    				<span>点点<img class="erWeiMa" src="img/PC/index/er.png" /></span>
+			    			</label>
+			    		</a>
+			    		<a>
+			    			<img src="img/sLogo2.png" />
+			    			<div>
+			    				<p>极简笔记</p>
+			    				<div>
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<span>5.0</span>
+			    				</div>
+			    				<p>极简笔记是一款非常简单实用的工具类小程序，它能让您非常快捷的记录您的日常生活</p>
+			    			</div>
+			    			<label>
+			    				<div>
+			    					<span>工具</span>
+			    					<span>方便快捷</span>
+			    				</div>
+			    				<span>点点<img class="erWeiMa" src="img/PC/index/er.png" /></span>
+			    			</label>
+			    		</a>
+			    		<a>
+			    			<img src="img/sLogo2.png" />
+			    			<div>
+			    				<p>极简笔记</p>
+			    				<div>
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<span>5.0</span>
+			    				</div>
+			    				<p>极简笔记是一款非常简单实用的工具类小程序，它能让您非常快捷的记录您的日常生活</p>
+			    			</div>
+			    			<label>
+			    				<div>
+			    					<span>工具</span>
+			    					<span>方便快捷</span>
+			    				</div>
+			    				<span>点点<img class="erWeiMa" src="img/PC/index/er.png" /></span>
+			    			</label>
+			    		</a>
+			    		<a>
+			    			<img src="img/sLogo2.png" />
+			    			<div>
+			    				<p>极简笔记</p>
+			    				<div>
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<img src="img/detail/b_start1.png" />
+			    					<span>5.0</span>
+			    				</div>
+			    				<p>极简笔记是一款非常简单实用的工具类小程序，它能让您非常快捷的记录您的日常生活</p>
+			    			</div>
+			    			<label>
+			    				<div>
+			    					<span>工具</span>
+			    					<span>方便快捷</span>
+			    				</div>
+			    				<span>点点<img class="erWeiMa" src="img/PC/index/er.png" /></span>
+			    			</label>
+			    		</a>
+					</div>
+					<span>查看更多</span>
+				</div>
+			</div>
+		
+		
+		<!-- 底部PC -->
+	    <div class="footer_pc">
+	    	<span>
+	    	<img src="img/PC/index/bottomLogo.png" />
+	    	<div>
+	    		<a href="index.html">精选</a>
+	    		<span></span>
+	    		<a href="class.html">类别</a>
+	    		<span></span>
+	    		<a href="theme.html">专题</a>
+	    		<span></span>
+	    		<a href="appraise.html">测评</a>
+	    	</div>
+	    	<p>Copyright © 2016 www.diandianchengxu.com. All Rights Reserved.</p>
+	    	<div>
+	    		<div><img src="img/PC/index/blogo.png" /></div>
+	    		<p>扫一扫关注点点程序</p>
+	    	</div>
+	    	</span>
+	    </div>
+	    <script type="text/javascript" src="js/main.js" ></script>
+		<script type="text/javascript" src="js/category.js" ></script>
+		<script>
+			$(".xxPc>a").click(function(){
+					$(this).addClass("activeXXPcA").siblings("a").removeClass("activeXXPcA");
+				});
+				$(".classTitle_pc>a").click(function(){
+					$(this).addClass("activeFont").siblings("a").removeClass("activeFont");
+				});
+			$(".topNav>a").click(function(){
+				var index = $(this).index();
+				$(this).addClass("activeFont").siblings().removeClass("activeFont");
+				$(".topNav>div").css("left",50*index+"%");
+				$(".contentBox>div").eq(index).css("display","block").siblings().css("display","none");
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,16 @@
+@charset "utf-8";
+/* CSS Document */
+* {margin:0px; padding:0px; list-style:none; font-family:黑体;}
+body {width:100%; background-color:#fff; overflow-x:hidden;}
+a {border:none; text-decoration:none;}
+img {border:none; width:100%; height:auto;}
+a{blr:expression(this.onFocus=this.blur())}/*去掉a标签的虚线框，避免出现奇怪的选中区域*/
+:focus{outline:0;}
+header,div,ul,li,nav {display:block;}
+header,div,article,section,figure,footer {height:auto; overflow:hidden; width:100%;}
+input[type="button"], input[type="submit"], input[type="reset"] {-webkit-appearance: none;}
+textarea,select {  -webkit-appearance: none;}  
+a {display:block;} 
+::-webkit-scrollbar{width:0px;}
+::-webkit-scrollbar-track{background-color:#bee1eb;}
+::-webkit-scrollbar-thumb{background-color:#00aff0;}

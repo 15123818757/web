@@ -1,0 +1,459 @@
+#banner1,#banner2,#banner3{
+	background: none;
+}
+#banner2{
+	z-index: 10;
+	background: white;
+}
+
+.box>div:nth-of-type(3){
+	z-index: 55;
+	background: url(../images/operation/moblie/bg4.png) no-repeat;
+    background-size: 100% 100%;
+}
+.box>div:nth-of-type(4){
+	background: #efeee9;
+}
+
+#banner1 p:nth-of-type(2),#banner2 p:nth-of-type(2),#banner3 p:nth-of-type(2){
+	width: 100%;
+	font-size: 0.6rem;
+	max-width: 100%;
+}
+#earth{
+	width: 80%;
+    margin: auto;
+    display: block;
+    margin-top: 15%;
+}
+#boat{
+	-webkit-transform: translate(0) scale(1) rotateZ(0);
+	left: 50%;
+    top: 17%;
+    height: 16.8%;
+    -webkit-transform: translate(0) scale(1) rotateZ(0);;
+	animation: boatAni 20s linear infinite;
+	-webkit-animation: boatAni 20s linear infinite;
+	-moz-animation: boatAni 20s linear infinite;
+	-ms-animation: boatAni 20s linear infinite;
+	-o-animation: boatAni 20s linear infinite;
+}
+@keyframes boatAni {
+	0% {transform: translate(0) scale(1) rotateZ(0);-webkit-transform: translate(0) scale(1) rotateZ(0);}
+	9% {transform: translate(10%, 60%) scale(1) rotateZ(0);-webkit-transform: translate(10%, 60%) scale(1) rotateZ(0);}
+	18% {transform: translate(10%, 60%) scale(1) rotateZ(60deg);-webkit-transform: translate(10%, 60%) scale(1) rotateZ(60deg);}
+	27% {transform: translate(-220%, 200%) scale(0.7) rotateZ(60deg);-webkit-transform: translate(-220%, 200%) scale(0.7) rotateZ(60deg);}
+	36% {transform: translate(-220%, 200%) scale(0.6) rotateZ(90deg);-webkit-transform: translate(-220%, 200%) scale(0.6) rotateZ(90deg);}
+	45% {transform: translate(-380%, 210%) scale(0.5) rotateZ(90deg);-webkit-transform: translate(-380%, 210%) scale(0.5) rotateZ(90deg);}
+	54% {transform: translate(-380%, 210%) scale(0.5) rotateZ(290deg);-webkit-transform: translate(-380%, 210%) scale(0.5) rotateZ(290deg);}
+	63% {transform: translate(-220%, 190%) scale(0.6) rotateZ(290deg);-webkit-transform: translate(-220%, 190%) scale(0.6) rotateZ(290deg);}
+	72% {transform: translate(-220%, 190%) scale(0.7) rotateZ(250deg);-webkit-transform: translate(-220%, 190%) scale(0.7) rotateZ(250deg);}
+	81% {transform: translate(10%, 50%) scale(1) rotateZ(250deg);-webkit-transform: translate(10%, 50%) scale(1) rotateZ(250deg);}
+	90% {transform: translate(0) scale(1) rotateZ(320deg);-webkit-transform: translate(0) scale(1) rotateZ(320deg);}
+	100% {transform: translate(0) scale(1) rotateZ(0);-webkit-transform: translate(0) scale(1) rotateZ(0);}
+}
+@-webkit-keyframes boatAni {
+	0% {transform: translate(0) scale(1) rotateZ(0);-webkit-transform: translate(0) scale(1) rotateZ(0);}
+	9% {transform: translate(10%, 60%) scale(1) rotateZ(0);-webkit-transform: translate(10%, 60%) scale(1) rotateZ(0);}
+	18% {transform: translate(10%, 60%) scale(1) rotateZ(60deg);-webkit-transform: translate(10%, 60%) scale(1) rotateZ(60deg);}
+	27% {transform: translate(-220%, 200%) scale(0.7) rotateZ(60deg);-webkit-transform: translate(-220%, 200%) scale(0.7) rotateZ(60deg);}
+	36% {transform: translate(-220%, 200%) scale(0.6) rotateZ(90deg);-webkit-transform: translate(-220%, 200%) scale(0.6) rotateZ(90deg);}
+	45% {transform: translate(-380%, 210%) scale(0.5) rotateZ(90deg);-webkit-transform: translate(-380%, 210%) scale(0.5) rotateZ(90deg);}
+	54% {transform: translate(-380%, 210%) scale(0.5) rotateZ(290deg);-webkit-transform: translate(-380%, 210%) scale(0.5) rotateZ(290deg);}
+	63% {transform: translate(-220%, 190%) scale(0.6) rotateZ(290deg);-webkit-transform: translate(-220%, 190%) scale(0.6) rotateZ(290deg);}
+	72% {transform: translate(-220%, 190%) scale(0.7) rotateZ(250deg);-webkit-transform: translate(-220%, 190%) scale(0.7) rotateZ(250deg);}
+	81% {transform: translate(10%, 50%) scale(1) rotateZ(250deg);-webkit-transform: translate(10%, 50%) scale(1) rotateZ(250deg);}
+	90% {transform: translate(0) scale(1) rotateZ(320deg);-webkit-transform: translate(0) scale(1) rotateZ(320deg);}
+	100% {transform: translate(0) scale(1) rotateZ(0);-webkit-transform: translate(0) scale(1) rotateZ(0);}
+}
+#house{
+	transform: scale(1);
+	height: 15%;
+    left: 5%;
+    top: 37%;
+}
+#lighthouse{
+	transform: scale(1);
+	height: 18%;
+    left: 58%;
+    top: 8%;
+}
+.cc1{
+			animation: imgAni6 1.5s linear;
+			-webkit-animation: imgAni6 1.5s linear;
+			-moz-animation: imgAni6 1.5s linear;
+			-o-animation: imgAni6 1.5s linear;
+			-ms-animation: imgAni6 1.5s linear;			
+		}
+		.cc2{
+			animation: imgAni6 0.7s linear;
+			-webkit-animation: imgAni6 0.7s linear;
+			-moz-animation: imgAni6 0.7s linear;
+			-o-animation: imgAni6 0.7s linear;
+			-ms-animation: imgAni6 0.7s linear;
+		}
+		@keyframes imgAni6{
+			0%{transform: scale(0);-webkit-transform: scale(0);}
+			60%{transform: scale(1.1);-webkit-transform: scale(1.1);}
+			80%{transform: scale(0.9);-webkit-transform: scale(0.9);}
+			100%{transform: scale(1);-webkit-transform: scale(1);}
+		}
+		@-webkit-keyframes imgAni6{
+			0%{transform: scale(0);-webkit-transform: scale(0);}
+			60%{transform: scale(1.1);-webkit-transform: scale(1.1);}
+			80%{transform: scale(0.9);-webkit-transform: scale(0.9);}
+			100%{transform: scale(1);-webkit-transform: scale(1);}
+		}
+		@-o-keyframes imgAni6{
+			0%{transform: scale(0);-o-transform: scale(0);}
+			60%{transform: scale(1.1);-o-transform: scale(1.1);}
+			80%{transform: scale(0.9);-o-transform: scale(0.9);}
+			100%{transform: scale(1);-o-transform: scale(1);}
+		}
+		@-moz-keyframes imgAni6{
+			0%{transform: scale(0);-moz-transform: scale(0);}
+			60%{transform: scale(1.1);-moz-transform: scale(1.1);}
+			80%{transform: scale(0.9);-moz-transform: scale(0.9);}
+			100%{transform: scale(1);-moz-transform: scale(1);}
+		}
+		@-ms-keyframes imgAni6{
+			0%{transform: scale(0);-ms-transform: scale(0);}
+			60%{transform: scale(1.1);-ms-transform: scale(1.1);}
+			80%{transform: scale(0.9);-ms-transform: scale(0.9);}
+			100%{transform: scale(1);-ms-transform: scale(1);}
+		}
+#banner1Box{
+	transform: rotateZ(0deg);
+	animation: banAni1 60s linear infinite;
+	-webkit-animation: banAni1 60s linear infinite;
+	-moz-animation: banAni1 60s linear infinite;
+	-o-animation: banAni1 60s linear infinite;
+	-ms-animation: banAni1 60s linear infinite;
+}
+@keyframes banAni1 {
+	from {
+		transform: rotateZ(0deg);
+	}
+	to {
+		transform: rotateZ(360deg);
+	}
+}
+
+@-webkit-keyframes banAni1 {
+	from {
+		transform: rotateZ(0deg);
+	}
+	to {
+		transform: rotateZ(360deg);
+	}
+}
+
+@-moz-keyframes banAni1 {
+	from {
+		transform: rotateZ(0deg);
+	}
+	to {
+		transform: rotateZ(360deg);
+	}
+}
+
+@-ms-keyframes banAni1 {
+	from {
+		transform: rotateZ(0deg);
+	}
+	to {
+		transform: rotateZ(360deg);
+	}
+}
+
+@-o-keyframes banAni1 {
+	from {
+		transform: rotateZ(0deg);
+	}
+	to {
+		transform: rotateZ(360deg);
+	}
+}
+#banner2Box{
+	position: relative;
+	
+}
+#banner2Box img:nth-of-type(1){
+	display: block;
+	width: 98%;
+    margin: auto;
+    margin-top: 37%;
+}
+#banner2Box img:nth-of-type(2),#banner2Box img:nth-of-type(3),#banner2Box img:nth-of-type(4){
+	position: absolute;
+}#banner2Box img:nth-of-type(2){
+	height: 47%;
+    top: 1%;
+    left: 1%;
+    animation: imgAni1 2s linear infinite;
+    -webkit-animation: imgAni1 2s linear infinite;
+}
+#banner2Box img:nth-of-type(3){
+	height: 26%;
+    top: 19%;
+    left: 52%;
+    animation: imgAni1 2s linear infinite;
+    -webkit-animation: imgAni1 3s linear infinite;
+}
+#banner2Box img:nth-of-type(4){
+	top: 60%;
+    left: 43%;
+    height: 6%;
+    animation: shipAni 4s linear infinite;
+    -webkit-animation: shipAni 4s linear infinite;
+}
+@keyframes imgAni1{
+	0%{transform: translateY(0px);}
+	25%{transform: translateY(5px);}
+	50%{transform: translateY(0);}
+	75%{transform: translateY(-5px);}
+	100%{transform: translateY(0);}
+}
+@-webkit-keyframes imgAni1{
+	0%{transform: translateY(0px);}
+	25%{transform: translateY(5px);}
+	50%{transform: translateY(0);}
+	75%{transform: translateY(-5px);}
+	100%{transform: translateY(0);}
+}
+@keyframes shipAni{
+	0%{transform: translate(0px);}
+	25%{transform: translate(100%,0);}
+	55%{transform: translate(150%,-100%);}
+	75%{transform: translate(75%,-100%);}
+	100%{transform: translate(0);}
+}
+@-webkit-keyframes shipAni{
+	0%{transform: translate(0px);}
+	25%{transform: translate(100%,0);}
+	55%{transform: translate(150%,-100%);}
+	75%{transform: translate(75%,-100%);}
+	100%{transform: translate(0);}
+}
+#banner2Box img{
+	opacity: 1;
+}
+#banner3Box{
+	position: relative;
+}
+
+#place{
+	width:110%;
+	margin-top: 37%;
+	margin-left: -5%;
+}
+.car{
+	position: absolute;
+}
+.tree{
+	position: absolute;
+	opacity: 0;
+	transform-origin: 50% 100%;
+	-webkit-transition: 0.5s;
+	transform: scale(1);
+}
+#banner3Box img:nth-of-type(2){
+	height: 10%;
+    top: 50%;
+    left: 43%;
+}
+#banner3Box img:nth-of-type(3){
+	height: 8%;
+    top: 66%;
+    left: 88%;
+}
+#banner3Box img:nth-of-type(4){
+	height: 10%;
+    top: 68%;
+    left: 10%;
+}
+#banner3Box img:nth-of-type(5){
+	top: 63%;
+	left: 0%;
+    height: 8%;
+}
+#banner3Box img:nth-of-type(6){
+	top: 61%;
+    left: 4%;
+    height: 8%;
+}
+#banner3Box img:nth-of-type(7){
+	top: 58%;
+    left: 9%;
+    height: 8%;
+}
+#banner3Box img:nth-of-type(8){
+	top: 59%;
+    left: 51%;
+    height: 8%;
+}
+#banner3Box img:nth-of-type(9){
+	top: 55%;
+    left: 56%;
+    height: 8%;
+}
+#banner3Box img:nth-of-type(10){
+	top: 52%;
+    left: 61%;
+    height: 8%;
+}
+#banner3Box img:nth-of-type(11){
+    top: 44%;
+    left: 65%;
+    height: 13%;
+}
+#banner3Box img:nth-of-type(12){
+	top: 47%;
+    left: 18%;
+    height: 13%;
+}
+#banner3Box img:nth-of-type(13){
+	top: 53%;
+    left: 23%;
+    height: 5%;
+}
+#banner3Box img:nth-of-type(14){
+	top: 42%;
+    left: 27%;
+    height: 13%;
+}
+#banner3Box img:nth-of-type(15){
+	top: 38%;
+    left: 35%;
+    height: 13%;
+}
+#banner3Box img:nth-of-type(16){
+    top: 34%;
+    left: 43%;
+    height: 13%;
+}
+
+
+.treeAni{
+	animation: imgAni6 0.8s linear;
+	-webkit-animation: imgAni6 0.8s linear;
+	opacity: 1;
+}
+
+
+.box3Img2Ani{
+	animation: imgAni2 1s ease;
+	-webkit-animation: imgAni2 1s ease;
+	-o-animation: imgAni2 1s ease;
+	-moz-animation: imgAni2 1s ease;
+	-ms-animation: imgAni2 1s ease;
+}
+.box3Img3Ani{
+	animation: imgAni3 4s ease;
+	-webkit-animation: imgAni3 4s ease;
+	-o-animation: imgAni3 4s ease;
+	-moz-animation: imgAni3 4s ease;
+	-ms-animation: imgAni3 4s ease;
+}
+.box3Img4Ani{
+	animation: imgAni4 2s ease;
+	-webkit-animation: imgAni4 2s ease;
+	-o-animation: imgAni4 2s ease;
+	-moz-animation: imgAni4 2s ease;
+	-ms-animation: imgAni4 2s ease;
+}
+@keyframes imgAni2{
+    from{top: 46%;left: 37%;}
+    to{top: 50%;left: 43%;}
+}
+@-webkit-keyframes imgAni2{
+    from{top: 46%;left: 37%;}
+    to{top: 50%;left: 43%;}
+}
+@-moz-keyframes imgAni2{
+    from{top: 46%;left: 37%;}
+    to{top: 50%;left: 43%;}
+}
+@-o-keyframes imgAni2{
+    from{top: 46%;left: 37%;}
+    to{top: 50%;left: 43%;}
+}
+@-ms-keyframes imgAni2{
+    from{top: 46%;left: 37%;}
+    to{top: 50%;left: 43%;}
+}
+@keyframes imgAni3{
+    from{top: 58%;left: 73%;}
+    to{top: 66%;left: 88%;}
+}
+@-webkit-keyframes imgAni3{
+    from{top: 58%;left: 73%;}
+    to{top: 66%;left: 88%;}
+}
+@-o-keyframes imgAni3{
+    from{top: 58%;left: 73%;}
+    to{top: 66%;left: 88%;}
+}
+@-ms-keyframes imgAni3{
+    from{top: 58%;left: 73%;}
+    to{top: 66%;left: 88%;}
+}
+@-moz-keyframes imgAni3{
+    from{top: 58%;left: 73%;}
+    to{top: 66%;left: 88%;}
+}
+@keyframes imgAni4{
+    from{top: 73%;left: 24%;}
+    to{top: 68%;left: 10%;}
+}
+@-webkit-keyframes imgAni4{
+    from{top: 73%;left: 24%;}
+    to{top: 68%;left: 10%;}
+}
+@-o-keyframes imgAni4{
+    from{top: 73%;left: 24%;}
+    to{top: 68%;left: 10%;}
+}
+@-ms-keyframes imgAni4{
+    from{top: 73%;left: 24%;}
+    to{top: 68%;left: 10%;}
+}
+@-moz-keyframes imgAni4{
+    from{top: 73%;left: 24%;}
+    to{top: 68%;left: 10%;}
+}
+
+.banner>div>img,.banner>div>p{
+	opacity: 0;
+	transition: 2s !important;
+}
+
+
+
+.problemBox>div p:nth-of-type(2){
+	font-size:0.2rem;
+}
+
+
+.caseBanner{
+	position: absolute;
+	height: 100%;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	transition: 0.5s;
+}
+.shareTop>div:nth-of-type(1){
+	opacity: 1;
+}
+.caseBanner img{
+	float: left;
+	opacity: 1;
+	margin-top: 7%;
+	position: static;
+}
+
+
+.box>div:nth-of-type(2){
+	z-index: 55;
+}
